@@ -1,0 +1,1200 @@
+flex-wrap,flex-nowrap
+flex-wrap,"<div class=""flex flex-nowrap"">
+  <div>01</div>
+  <div>02</div>
+  <div>03</div>
+</div>"
+flex-wrap,flex-wrap
+flex-wrap,"<div class=""flex flex-wrap"">
+  <div>01</div>
+  <div>02</div>
+  <div>03</div>
+</div>"
+flex-wrap,flex-wrap-reverse
+flex-wrap,"<div class=""flex flex-wrap-reverse"">
+  <div>01</div>
+  <div>02</div>
+  <div>03</div>
+</div>"
+flex-wrap,hover:flex-wrap-reverse
+flex-wrap,flex-wrap-reverse
+flex-wrap,"<div class=""flex flex-wrap hover:flex-wrap-reverse"">
+  <!-- ... -->
+</div>
+"
+flex-wrap,md:flex-wrap-reverse
+flex-wrap,flex-wrap-reverse
+flex-wrap,"<div class=""flex flex-wrap md:flex-wrap-reverse"">
+  <!-- ... -->
+</div>
+"
+flex,flex-initial
+flex,"<div class=""flex"">
+  <div class=""flex-none w-14 h-14"">
+    01
+  </div>
+  <div class=""flex-initial w-64 ..."">
+    02
+  </div>
+  <div class=""flex-initial w-32 ..."">
+    03
+  </div>
+</div>"
+flex,flex-1
+flex,"<div class=""flex"">
+  <div class=""flex-none ..."">
+    01
+  </div>
+  <div class=""flex-1 w-64 ..."">
+    02
+  </div>
+  <div class=""flex-1 w-32 ..."">
+    03
+  </div>
+</div>"
+flex,flex-auto
+flex,"<div class=""flex ..."">
+  <div class=""flex-none ..."">
+    01
+  </div>
+  <div class=""flex-auto w-64 ..."">
+    02
+  </div>
+  <div class=""flex-auto w-32 ..."">
+    03
+  </div>
+</div>"
+flex,flex-none
+flex,"<div class=""flex ..."">
+  <div class=""flex-none w-14 h-14 ..."">
+    01
+  </div>
+  <div class=""flex-none ..."">
+    02
+  </div>
+  <div class=""flex-1 ..."">
+    03
+  </div>
+</div>"
+flex,hover:flex-1
+flex,flex-1
+flex,"<div class=""flex-none hover:flex-1"">
+  <!-- ... -->
+</div>
+"
+flex,md:flex-1
+flex,flex-1
+flex,"<div class=""flex-none md:flex-1"">
+  <!-- ... -->
+</div>
+"
+flex,flex
+flex,theme.flex
+flex,theme.extend.flex
+flex,tailwind.config.js
+flex,"module.exports = {
+  theme: {
+    extend: {
+      flex: {
+        '2': '2 2 0%'
+      }
+    }
+  }
+}
+"
+flex,flex
+flex,"<div class=""flex-[2_2_0%]"">
+  <!-- ... -->
+</div>
+"
+flex-grow,grow
+flex-grow,"<div class=""flex ..."">
+  <div class=""flex-none w-14 h-14 ..."">
+    01
+  </div>
+  <div class=""grow h-14 ..."">
+    02
+  </div>
+  <div class=""flex-none w-14 h-14 ..."">
+    03
+  </div>
+</div>"
+flex-grow,grow-0
+flex-grow,"<div class=""flex ..."">
+  <div class=""grow h-14 ..."">
+    01
+  </div>
+  <div class=""grow-0 h-14 ..."">
+    02
+  </div>
+  <div class=""grow h-14 ..."">
+    03
+  </div>
+</div>"
+flex-grow,hover:grow-0
+flex-grow,grow-0
+flex-grow,"<div class=""grow hover:grow-0"">
+  <!-- ... -->
+</div>
+"
+flex-grow,md:grow-0
+flex-grow,grow-0
+flex-grow,"<div class=""grow md:grow-0"">
+  <!-- ... -->
+</div>
+"
+flex-grow,grow
+flex-grow,theme.flexGrow
+flex-grow,theme.extend.flexGrow
+flex-grow,tailwind.config.js
+flex-grow,"module.exports = {
+  theme: {
+    extend: {
+      flexGrow: {
+        2: '2'
+      }
+    }
+  }
+}
+"
+flex-grow,flex-grow
+flex-grow,"<div class=""grow-[2]"">
+  <!-- ... -->
+</div>
+"
+flex-shrink,shrink
+flex-shrink,"<div class=""flex ..."">
+  <div class=""flex-none w-14 h-14 ..."">
+    01
+  </div>
+  <div class=""shrink w-64 h-14 ..."">
+    02
+  </div>
+  <div class=""flex-none w-14 h-14 ..."">
+    03
+  </div>
+</div>"
+flex-shrink,shrink-0
+flex-shrink,"<div class=""flex ..."">
+  <div class=""flex-1 h-16 ..."">
+    01
+  </div>
+  <div class=""shrink-0 h-16 w-32 ..."">
+    02
+  </div>
+  <div class=""flex-1 h-16 ..."">
+    03
+  </div>
+</div>"
+flex-shrink,hover:shrink-0
+flex-shrink,shrink-0
+flex-shrink,"<div class=""shrink hover:shrink-0"">
+  <!-- ... -->
+</div>
+"
+flex-shrink,md:shrink-0
+flex-shrink,shrink-0
+flex-shrink,"<div class=""shrink md:shrink-0"">
+  <!-- ... -->
+</div>
+"
+flex-shrink,shrink
+flex-shrink,theme.flexShrink
+flex-shrink,theme.extend.flexShrink
+flex-shrink,tailwind.config.js
+flex-shrink,"module.exports = {
+  theme: {
+    extend: {
+      flexShrink: {
+        2: '2'
+      }
+    }
+  }
+}
+"
+flex-shrink,flex-shrink
+flex-shrink,"<div class=""shrink-[2]"">
+  <!-- ... -->
+</div>
+"
+order,order-{order}
+order,"<div class=""flex justify-between ..."">
+  <div class=""order-last"">01</div>
+  <div>02</div>
+  <div>03</div>
+</div>"
+order,"<div class=""-order-1"">
+  <!-- ... -->
+</div>"
+order,hover:order-last
+order,order-last
+order,"<div class=""order-first hover:order-last"">
+  <!-- ... -->
+</div>
+"
+order,md:order-last
+order,order-last
+order,"<div class=""order-first md:order-last"">
+  <!-- ... -->
+</div>
+"
+order,order-first
+order,order-last
+order,order-none
+order,order-{number}
+order,theme.order
+order,theme.extend.order
+order,tailwind.config.js
+order,"module.exports = {
+  theme: {
+    extend: {
+      order: {
+        '13': '13'
+      }
+    }
+  }
+}
+"
+order,order
+order,"<div class=""order-[13]"">
+  <!-- ... -->
+</div>
+"
+grid-template-columns,grid-cols-{n}
+grid-template-columns,"<div class=""grid grid-cols-4 gap-4"">
+  <div>01</div>
+  <!-- ... -->
+  <div>09</div>
+</div>"
+grid-template-columns,grid-cols-subgrid
+grid-template-columns,"<div class=""grid grid-cols-4 gap-4"">
+  <div>01</div>
+  <!-- ... -->
+  <div>05</div>
+  <div class=""grid grid-cols-subgrid gap-4 col-span-3"">
+    <div class=""col-start-2"">06</div>
+  </div>
+</div>"
+grid-template-columns,hover:grid-cols-6
+grid-template-columns,grid-cols-6
+grid-template-columns,"<div class=""grid grid-cols-1 hover:grid-cols-6"">
+  <!-- ... -->
+</div>
+"
+grid-template-columns,md:grid-cols-6
+grid-template-columns,grid-cols-6
+grid-template-columns,"<div class=""grid grid-cols-1 md:grid-cols-6"">
+  <!-- ... -->
+</div>
+"
+grid-template-columns,grid-template-column
+grid-template-columns,theme.gridTemplateColumns
+grid-template-columns,theme.extend.gridTemplateColumns
+grid-template-columns,tailwind.config.js
+grid-template-columns,grid-template-columns
+grid-template-columns,"module.exports = {
+  theme: {
+    extend: {
+      gridTemplateColumns: {
+        // Simple 16 column grid
+        '16': 'repeat(16, minmax(0, 1fr))',
+
+        // Complex site-specific column configuration
+        'footer': '200px minmax(900px, 1fr) 100px',
+      }
+    }
+  }
+}
+"
+grid-template-columns,grid-template-columns
+grid-template-columns,"<div class=""grid grid-cols-[200px_minmax(900px,_1fr)_100px]"">
+  <!-- ... -->
+</div>
+"
+grid-column,col-span-{n}
+grid-column,"<div class=""grid grid-cols-3 gap-4"">
+  <div class=""..."">01</div>
+  <div class=""..."">02</div>
+  <div class=""..."">03</div>
+  <div class=""col-span-2 ..."">04</div>
+  <div class=""..."">05</div>
+  <div class=""..."">06</div>
+  <div class=""col-span-2 ..."">07</div>
+</div>"
+grid-column,col-start-{n}
+grid-column,col-end-{n}
+grid-column,col-span-{n}
+grid-column,"<div class=""grid grid-cols-6 gap-4"">
+  <div class=""col-start-2 col-span-4 ..."">01</div>
+  <div class=""col-start-1 col-end-3 ..."">02</div>
+  <div class=""col-end-7 col-span-2 ..."">03</div>
+  <div class=""col-start-1 col-end-7 ..."">04</div>
+</div>"
+grid-column,hover:col-span-6
+grid-column,col-span-6
+grid-column,"<div class=""col-span-2 hover:col-span-6"">
+  <!-- ... -->
+</div>
+"
+grid-column,md:col-span-6
+grid-column,col-span-6
+grid-column,"<div class=""col-span-2 md:col-span-6"">
+  <!-- ... -->
+</div>
+"
+grid-column,gridColumn
+grid-column,gridColumnStart
+grid-column,gridColumnEnd
+grid-column,col-{value}
+grid-column,grid-column
+grid-column,gridColumn
+grid-column,"module.exports = {
+  theme: {
+    extend: {
+      gridColumn: {
+        'span-16': 'span 16 / span 16',
+      }
+    }
+  }
+}
+"
+grid-column,col-span-{n}
+grid-column,grid-column
+grid-column,span
+grid-column,span
+grid-column,col-start-{n}
+grid-column,gridColumnStart
+grid-column,"module.exports = {
+  theme: {
+    extend: {
+      gridColumnStart: {
+        '13': '13',
+        '14': '14',
+        '15': '15',
+        '16': '16',
+        '17': '17',
+      }
+    }
+  }
+}
+"
+grid-column,col-end-{n}
+grid-column,gridColumnEnd
+grid-column,"module.exports = {
+  theme: {
+    extend: {
+      gridColumnEnd: {
+        '13': '13',
+        '14': '14',
+        '15': '15',
+        '16': '16',
+        '17': '17',
+      }
+    }
+  }
+}
+"
+grid-column,grid-column/grid-column-start/grid-column-end
+grid-column,"<div class=""col-[16_/_span_16]"">
+  <!-- ... -->
+</div>
+"
+grid-template-rows,grid-rows-{n}
+grid-template-rows,"<div class=""grid grid-rows-4 grid-flow-col gap-4"">
+  <div>01</div>
+  <!-- ... -->
+  <div>09</div>
+</div>"
+grid-template-rows,grid-rows-subgrid
+grid-template-rows,"<div class=""grid grid-rows-4 grid-flow-col gap-4"">
+  <div>01</div>
+  <!-- ... -->
+  <div>05</div>
+  <div class=""grid grid-rows-subgrid gap-4 row-span-3"">
+      <div class=""row-start-2"">06</div>
+  </div>
+  <div>07</div>
+  <!-- ... -->
+  <div>10</div>
+</div>"
+grid-template-rows,hover:grid-rows-6
+grid-template-rows,grid-rows-6
+grid-template-rows,"<div class=""grid grid-rows-2 hover:grid-rows-6"">
+  <!-- ... -->
+</div>
+"
+grid-template-rows,md:grid-rows-6
+grid-template-rows,grid-rows-6
+grid-template-rows,"<div class=""grid grid-rows-2 md:grid-rows-6"">
+  <!-- ... -->
+</div>
+"
+grid-template-rows,grid-template-row
+grid-template-rows,theme.gridTemplateRows
+grid-template-rows,theme.extend.gridTemplateRows
+grid-template-rows,tailwind.config.js
+grid-template-rows,grid-template-rows
+grid-template-rows,"module.exports = {
+  theme: {
+    extend: {
+      gridTemplateRows: {
+        // Simple 16 row grid
+        '16': 'repeat(16, minmax(0, 1fr))',
+
+        // Complex site-specific row configuration
+        'layout': '200px minmax(900px, 1fr) 100px',
+      }
+    }
+  }
+}
+"
+grid-template-rows,grid-template-rows
+grid-template-rows,"<div class=""grid grid-rows-[200px_minmax(900px,_1fr)_100px]"">
+  <!-- ... -->
+</div>
+"
+grid-row,row-span-{n}
+grid-row,"<div class=""grid grid-rows-3 grid-flow-col gap-4"">
+  <div class=""row-span-3 ..."">01</div>
+  <div class=""col-span-2 ..."">02</div>
+  <div class=""row-span-2 col-span-2 ..."">03</div>
+</div>"
+grid-row,row-start-{n}
+grid-row,row-end-{n}
+grid-row,row-span-{n}
+grid-row,"<div class=""grid grid-rows-3 grid-flow-col gap-4"">
+  <div class=""row-start-2 row-span-2 ..."">01</div>
+  <div class=""row-end-3 row-span-2 ..."">02</div>
+  <div class=""row-start-1 row-end-4 ..."">03</div>
+</div>"
+grid-row,hover:row-span-4
+grid-row,row-span-4
+grid-row,"<div class=""row-span-3 hover:row-span-4"">
+  <!-- ... -->
+</div>
+"
+grid-row,md:row-span-4
+grid-row,row-span-4
+grid-row,"<div class=""row-span-3 md:row-span-4"">
+  <!-- ... -->
+</div>
+"
+grid-row,theme.gridRow
+grid-row,theme.extend.gridRow
+grid-row,theme.gridRowStart
+grid-row,theme.extend.gridRowStart
+grid-row,theme.gridRowEnd
+grid-row,theme.extend.gridRowEnd
+grid-row,tailwind.config.js
+grid-row,row-{value}
+grid-row,grid-row
+grid-row,gridRow
+grid-row,"module.exports = {
+  theme: {
+    extend: {
+      gridRow: {
+        'span-16': 'span 16 / span 16',
+      }
+    }
+  }
+}
+"
+grid-row,row-span-{n}
+grid-row,grid-row
+grid-row,span
+grid-row,span
+grid-row,row-start-{n}
+grid-row,gridRowStart
+grid-row,"module.exports = {
+  theme: {
+    extend: {
+      gridRowStart: {
+        '8': '8',
+        '9': '9',
+        '10': '10',
+        '11': '11',
+        '12': '12',
+        '13': '13',
+      }
+    }
+  }
+}
+"
+grid-row,row-end-{n}
+grid-row,gridRowEnd
+grid-row,"module.exports = {
+  theme: {
+    extend: {
+      gridRowEnd: {
+        '8': '8',
+        '9': '9',
+        '10': '10',
+        '11': '11',
+        '12': '12',
+        '13': '13',
+      }
+    }
+  }
+}
+"
+grid-row,grid-row/grid-row-start/grid-row-end
+grid-row,"<div class=""row-[span_16_/_span_16]"">
+  <!-- ... -->
+</div>
+"
+grid-auto-flow,grid-flow-{keyword}
+grid-auto-flow,"<div class=""grid grid-flow-row-dense grid-cols-3 grid-rows-3 ..."">
+  <div class=""col-span-2"">01</div>
+  <div class=""col-span-2"">02</div>
+  <div>03</div>
+  <div>04</div>
+  <div>05</div>
+</div>"
+grid-auto-flow,hover:grid-flow-row
+grid-auto-flow,grid-flow-row
+grid-auto-flow,"<div class=""grid grid-flow-col hover:grid-flow-row"">
+  <!-- ... -->
+</div>
+"
+grid-auto-flow,md:grid-flow-row
+grid-auto-flow,grid-flow-row
+grid-auto-flow,"<div class=""grid grid-flow-col md:grid-flow-row"">
+  <!-- ... -->
+</div>
+"
+grid-auto-columns,auto-cols-{size}
+grid-auto-columns,"<div class=""grid grid-flow-col auto-cols-max"">
+  <div>01</div>
+  <div>02</div>
+  <div>03</div>
+</div>"
+grid-auto-columns,hover:auto-cols-min
+grid-auto-columns,auto-cols-min
+grid-auto-columns,"<div class=""grid grid-flow-col auto-cols-max hover:auto-cols-min"">
+  <!-- ... -->
+</div>
+"
+grid-auto-columns,md:auto-cols-min
+grid-auto-columns,auto-cols-min
+grid-auto-columns,"<div class=""grid grid-flow-col auto-cols-max md:auto-cols-min"">
+  <!-- ... -->
+</div>
+"
+grid-auto-columns,grid-auto-columns
+grid-auto-columns,theme.gridAutoColumns
+grid-auto-columns,theme.extend.gridAutoColumns
+grid-auto-columns,tailwind.config.js
+grid-auto-columns,"module.exports = {
+  theme: {
+    extend: {
+      gridAutoColumns: {
+        '2fr': 'minmax(0, 2fr)',
+      }
+    }
+  }
+}
+"
+grid-auto-columns,grid-auto-columns
+grid-auto-columns,"<div class=""grid grid-flow-col auto-cols-[minmax(0,_2fr)]"">
+  <!-- ... -->
+</div>
+"
+grid-auto-rows,auto-rows-{size}
+grid-auto-rows,"<div class=""grid grid-flow-row auto-rows-max"">
+  <div>01</div>
+  <div>02</div>
+  <div>03</div>
+</div>"
+grid-auto-rows,hover:auto-rows-min
+grid-auto-rows,auto-rows-min
+grid-auto-rows,"<div class=""grid grid-flow-row auto-rows-max hover:auto-rows-min"">
+  <!-- ... -->
+</div>
+"
+grid-auto-rows,md:auto-rows-min
+grid-auto-rows,auto-rows-min
+grid-auto-rows,"<div class=""grid grid-flow-row auto-rows-max md:auto-rows-min"">
+  <!-- ... -->
+</div>
+"
+grid-auto-rows,grid-auto-rows
+grid-auto-rows,theme.gridAutoRows
+grid-auto-rows,theme.extend.gridAutoRows
+grid-auto-rows,tailwind.config.js
+grid-auto-rows,"module.exports = {
+  theme: {
+    extend: {
+      gridAutoRows: {
+        '2fr': 'minmax(0, 2fr)',
+      }
+    }
+  }
+}
+"
+grid-auto-rows,grid-auto-rows
+grid-auto-rows,"<div class=""grid grid-flow-row auto-rows-[minmax(0,_2fr)]"">
+  <!-- ... -->
+</div>
+"
+gap,gap-{size}
+gap,"<div class=""grid gap-4 grid-cols-2"">
+  <div>01</div>
+  <div>02</div>
+  <div>03</div>
+  <div>04</div>
+</div>"
+gap,gap-x-{size}
+gap,gap-y-{size}
+gap,"<div class=""grid gap-x-8 gap-y-4 grid-cols-3"">
+  <div>01</div>
+  <div>02</div>
+  <div>03</div>
+  <div>04</div>
+  <div>05</div>
+  <div>06</div>
+</div>"
+gap,hover:gap-6
+gap,gap-6
+gap,"<div class=""grid gap-4 hover:gap-6"">
+  <!-- ... -->
+</div>
+"
+gap,md:gap-6
+gap,gap-6
+gap,"<div class=""grid gap-4 md:gap-6"">
+  <!-- ... -->
+</div>
+"
+gap,theme.spacing
+gap,theme.extend.spacing
+gap,tailwind.config.js
+gap,"module.exports = {
+  theme: {
+    extend: {
+      spacing: {
+        '11': '2.75rem',
+      }
+    }
+  }
+}
+"
+gap,theme.gap
+gap,theme.extend.gap
+gap,tailwind.config.js
+gap,"module.exports = {
+  theme: {
+    extend: {
+      gap: {
+        '11': '2.75rem',
+      }
+    }
+  }
+}
+"
+gap,gap
+gap,"<div class=""grid gap-[2.75rem]"">
+  <!-- ... -->
+</div>
+"
+justify-content,justify-start
+justify-content,"<div class=""flex justify-start ..."">
+  <div>01</div>
+  <div>02</div>
+  <div>03</div>
+</div>"
+justify-content,justify-center
+justify-content,"<div class=""flex justify-center ..."">
+  <div>01</div>
+  <div>02</div>
+  <div>03</div>
+</div>"
+justify-content,justify-end
+justify-content,"<div class=""flex justify-end ..."">
+  <div>01</div>
+  <div>02</div>
+  <div>03</div>
+</div>"
+justify-content,justify-between
+justify-content,"<div class=""flex justify-between ..."">
+  <div>01</div>
+  <div>02</div>
+  <div>03</div>
+</div>"
+justify-content,justify-around
+justify-content,"<div class=""flex justify-around ..."">
+  <div>01</div>
+  <div>02</div>
+  <div>03</div>
+</div>"
+justify-content,justify-evenly
+justify-content,justify-around
+justify-content,"<div class=""flex justify-evenly ..."">
+  <div>01</div>
+  <div>02</div>
+  <div>03</div>
+</div>"
+justify-content,justify-stretch
+justify-content,"<div class=""grid grid-flow-col justify-stretch ..."">
+  <div>01</div>
+  <div>02</div>
+  <div>03</div>
+</div>"
+justify-content,justify-normal
+justify-content,justify-content
+justify-content,"<div class=""flex justify-normal ..."">
+  <div>01</div>
+  <div>02</div>
+  <div>03</div>
+</div>"
+justify-content,hover:justify-between
+justify-content,justify-between
+justify-content,"<div class=""flex justify-start hover:justify-between"">
+  <!-- ... -->
+</div>
+"
+justify-content,md:justify-between
+justify-content,justify-between
+justify-content,"<div class=""flex justify-start md:justify-between"">
+  <!-- ... -->
+</div>
+"
+justify-items,justify-items-start
+justify-items,"<div class=""grid justify-items-start ..."">
+  <div>01</div>
+  <div>02</div>
+  <div>03</div>
+  <div>04</div>
+  <div>05</div>
+  <div>06</div>
+</div>"
+justify-items,justify-items-end
+justify-items,"<div class=""grid justify-items-end ..."">
+  <div>01</div>
+  <div>02</div>
+  <div>03</div>
+  <div>04</div>
+  <div>05</div>
+  <div>06</div>
+</div>"
+justify-items,justify-items-center
+justify-items,"<div class=""grid justify-items-center ..."">
+  <div>01</div>
+  <div>02</div>
+  <div>03</div>
+  <div>04</div>
+  <div>05</div>
+  <div>06</div>
+</div>"
+justify-items,justify-items-stretch
+justify-items,"<div class=""grid justify-items-stretch ..."">
+  <div>01</div>
+  <div>02</div>
+  <div>03</div>
+  <div>04</div>
+  <div>05</div>
+  <div>06</div>
+</div>"
+justify-items,hover:justify-items-center
+justify-items,justify-items-center
+justify-items,"<div class=""grid justify-items-start hover:justify-items-center"">
+  <!-- ... -->
+</div>
+"
+justify-items,md:justify-items-center
+justify-items,justify-items-center
+justify-items,"<div class=""grid justify-items-start md:justify-items-center"">
+  <!-- ... -->
+</div>
+"
+justify-self,justify-self-auto
+justify-self,justify-items
+justify-self,"<div class=""grid justify-items-stretch ..."">
+  <!-- ... -->
+  <div class=""justify-self-auto ..."">02</div>
+  <!-- ... -->
+  <!-- ... -->
+  <!-- ... -->
+  <!-- ... -->
+</div>"
+justify-self,justify-self-start
+justify-self,"<div class=""grid justify-items-stretch ..."">
+  <!-- ... -->
+  <div class=""justify-self-start ..."">02</div>
+  <!-- ... -->
+  <!-- ... -->
+  <!-- ... -->
+  <!-- ... -->
+</div>"
+justify-self,justify-self-center
+justify-self,"<div class=""grid justify-items-stretch ..."">
+  <!-- ... -->
+  <div class=""justify-self-center ..."">02</div>
+  <!-- ... -->
+  <!-- ... -->
+  <!-- ... -->
+  <!-- ... -->
+</div>"
+justify-self,justify-self-end
+justify-self,"<div class=""grid justify-items-stretch ..."">
+  <!-- ... -->
+  <div class=""justify-self-end ..."">02</div>
+  <!-- ... -->
+  <!-- ... -->
+  <!-- ... -->
+  <!-- ... -->
+</div>"
+justify-self,justify-self-stretch
+justify-self,"<div class=""grid justify-items-start ..."">
+  <!-- ... -->
+  <div class=""justify-self-stretch ..."">02</div>
+  <!-- ... -->
+  <!-- ... -->
+  <!-- ... -->
+  <!-- ... -->
+</div>"
+justify-self,hover:justify-self-end
+justify-self,justify-self-end
+justify-self,"<div class=""justify-self-start hover:justify-self-end"">
+  <!-- ... -->
+</div>
+"
+justify-self,md:justify-self-end
+justify-self,justify-self-end
+justify-self,"<div class=""justify-self-start md:justify-self-end"">
+  <!-- ... -->
+</div>
+"
+align-content,content-start
+align-content,"<div class=""h-56 grid grid-cols-3 gap-4 content-start ..."">
+  <div>01</div>
+  <div>02</div>
+  <div>03</div>
+  <div>04</div>
+  <div>05</div>
+</div>"
+align-content,content-center
+align-content,"<div class=""h-56 grid grid-cols-3 gap-4 content-center ..."">
+  <div>01</div>
+  <div>02</div>
+  <div>03</div>
+  <div>04</div>
+  <div>05</div>
+</div>"
+align-content,content-end
+align-content,"<div class=""h-56 grid grid-cols-3 gap-4 content-end ..."">
+  <div>01</div>
+  <div>02</div>
+  <div>03</div>
+  <div>04</div>
+  <div>05</div>
+</div>"
+align-content,content-between
+align-content,"<div class=""h-56 grid grid-cols-3 gap-4 content-between ..."">
+  <div>01</div>
+  <div>02</div>
+  <div>03</div>
+  <div>04</div>
+  <div>05</div>
+</div>"
+align-content,content-around
+align-content,"<div class=""h-56 grid grid-cols-3 gap-4 content-around ..."">
+  <div>01</div>
+  <div>02</div>
+  <div>03</div>
+  <div>04</div>
+  <div>05</div>
+</div>"
+align-content,content-evenly
+align-content,content-around
+align-content,"<div class=""h-56 grid grid-cols-3 gap-4 content-evenly ..."">
+  <div>01</div>
+  <div>02</div>
+  <div>03</div>
+  <div>04</div>
+  <div>05</div>
+</div>"
+align-content,content-stretch
+align-content,"<div class=""h-56 grid grid-cols-3 gap-4 content-stretch ..."">
+  <div>01</div>
+  <div>02</div>
+  <div>03</div>
+  <div>04</div>
+  <div>05</div>
+</div>"
+align-content,content-normal
+align-content,align-content
+align-content,"<div class=""h-56 grid grid-cols-3 gap-4 content-normal ..."">
+  <div>01</div>
+  <div>02</div>
+  <div>03</div>
+  <div>04</div>
+  <div>05</div>
+</div>"
+align-content,hover:content-around
+align-content,content-around
+align-content,"<div class=""grid content-start hover:content-around"">
+  <!-- ... -->
+</div>
+"
+align-content,md:content-around
+align-content,content-around
+align-content,"<div class=""grid content-start md:content-around"">
+  <!-- ... -->
+</div>
+"
+align-items,items-stretch
+align-items,"<div class=""flex items-stretch ..."">
+  <div class=""py-4"">01</div>
+  <div class=""py-12"">02</div>
+  <div class=""py-8"">03</div>
+</div>"
+align-items,items-start
+align-items,"<div class=""flex items-start ..."">
+  <div class=""py-4"">01</div>
+  <div class=""py-12"">02</div>
+  <div class=""py-8"">03</div>
+</div>"
+align-items,items-center
+align-items,"<div class=""flex items-center ..."">
+  <div class=""py-4"">01</div>
+  <div class=""py-12"">02</div>
+  <div class=""py-8"">03</div>
+</div>"
+align-items,items-end
+align-items,"<div class=""flex items-end ..."">
+  <div class=""py-4"">01</div>
+  <div class=""py-12"">02</div>
+  <div class=""py-8"">03</div>
+</div>"
+align-items,items-baseline
+align-items,"<div class=""flex items-baseline ..."">
+  <div class=""pt-2 pb-6"">01</div>
+  <div class=""pt-8 pb-12"">02</div>
+  <div class=""pt-12 pb-4"">03</div>
+</div>"
+align-items,hover:items-center
+align-items,items-center
+align-items,"<div class=""flex items-stretch hover:items-center"">
+  <!-- ... -->
+</div>
+"
+align-items,md:items-center
+align-items,items-center
+align-items,"<div class=""flex items-stretch md:items-center"">
+  <!-- ... -->
+</div>
+"
+align-self,self-auto
+align-self,align-items
+align-self,"<div class=""flex items-stretch ..."">
+  <div>01</div>
+  <div class=""self-auto ..."">02</div>
+  <div>03</div>
+</div>"
+align-self,self-start
+align-self,align-items
+align-self,"<div class=""flex items-stretch ..."">
+  <div>01</div>
+  <div class=""self-start ..."">02</div>
+  <div>03</div>
+</div>"
+align-self,self-center
+align-self,align-items
+align-self,"<div class=""flex items-stretch ..."">
+  <div>01</div>
+  <div class=""self-center ..."">02</div>
+  <div>03</div>
+</div>"
+align-self,self-end
+align-self,align-items
+align-self,"<div class=""flex items-stretch ..."">
+  <div>01</div>
+  <div class=""self-end ..."">02</div>
+  <div>03</div>
+</div>"
+align-self,self-stretch
+align-self,align-items
+align-self,"<div class=""flex items-stretch ..."">
+  <div>01</div>
+  <div class=""self-stretch ..."">02</div>
+  <div>03</div>
+</div>"
+align-self,hover:self-end
+align-self,self-end
+align-self,"<div class=""self-auto hover:self-end"">
+  <!-- ... -->
+</div>
+"
+align-self,md:self-end
+align-self,self-end
+align-self,"<div class=""self-auto md:self-end"">
+  <!-- ... -->
+</div>
+"
+place-content,place-content-center
+place-content,"<div class=""grid grid-cols-2 gap-4 place-content-center h-48 ..."">
+  <div>01</div>
+  <div>02</div>
+  <div>03</div>
+  <div>04</div>
+</div>"
+place-content,place-content-start
+place-content,"<div class=""grid grid-cols-2 gap-4 place-content-start h-48 ..."">
+  <div>01</div>
+  <div>02</div>
+  <div>03</div>
+  <div>04</div>
+</div>"
+place-content,place-content-end
+place-content,"<div class=""grid grid-cols-2 gap-4 place-content-end h-48 ..."">
+  <div>01</div>
+  <div>02</div>
+  <div>03</div>
+  <div>04</div>
+</div>"
+place-content,place-content-between
+place-content,"<div class=""grid grid-cols-2 gap-4 place-content-between h-48 ..."">
+  <div>01</div>
+  <div>02</div>
+  <div>03</div>
+  <div>04</div>
+</div>"
+place-content,place-content-around
+place-content,"<div class=""grid grid-cols-2 gap-4 place-content-around h-48 ..."">
+  <div>01</div>
+  <div>02</div>
+  <div>03</div>
+  <div>04</div>
+</div>"
+place-content,place-content-evenly
+place-content,"<div class=""grid grid-cols-2 gap-4 place-content-evenly h-48 ..."">
+  <div>01</div>
+  <div>02</div>
+  <div>03</div>
+  <div>04</div>
+</div>"
+place-content,place-content-stretch
+place-content,"<div class=""grid grid-cols-2 gap-4 place-content-stretch h-48 ..."">
+  <div>01</div>
+  <div>02</div>
+  <div>03</div>
+  <div>04</div>
+</div>"
+place-content,hover:place-content-center
+place-content,place-content-center
+place-content,"<div class=""grid place-content-start hover:place-content-center"">
+  <!-- ... -->
+</div>
+"
+place-content,md:place-content-center
+place-content,place-content-center
+place-content,"<div class=""grid place-content-start md:place-content-center"">
+  <!-- ... -->
+</div>
+"
+place-items,place-items-start
+place-items,"<div class=""grid grid-cols-3 gap-4 place-items-start ..."">
+  <div>01</div>
+  <div>02</div>
+  <div>03</div>
+  <div>04</div>
+  <div>05</div>
+  <div>06</div>
+</div>"
+place-items,place-items-end
+place-items,"<div class=""grid grid-cols-3 gap-4 place-items-end h-56 ..."">
+  <div>01</div>
+  <div>02</div>
+  <div>03</div>
+  <div>04</div>
+  <div>05</div>
+  <div>06</div>
+</div>"
+place-items,place-items-center
+place-items,"<div class=""grid grid-cols-3 gap-4 place-items-center h-56 ..."">
+  <div>01</div>
+  <div>02</div>
+  <div>03</div>
+  <div>04</div>
+  <div>05</div>
+  <div>06</div>
+</div>"
+place-items,place-items-stretch
+place-items,"<div class=""grid grid-cols-3 gap-4 place-items-stretch h-56 ..."">
+  <div>01</div>
+  <div>02</div>
+  <div>03</div>
+  <div>04</div>
+  <div>05</div>
+  <div>06</div>
+</div>"
+place-items,hover:place-items-center
+place-items,place-items-center
+place-items,"<div class=""grid place-items-start hover:place-items-center"">
+  <!-- ... -->
+</div>
+"
+place-items,md:place-items-center
+place-items,place-items-center
+place-items,"<div class=""grid place-items-start md:place-items-center"">
+  <!-- ... -->
+</div>
+"
+place-self,place-self-auto
+place-self,place-items
+place-self,"<div class=""grid grid-cols-3 gap-4 ..."">
+  <div>01</div>
+  <div class=""place-self-auto ..."">02</div>
+  <div>03</div>
+  <div>04</div>
+  <div>05</div>
+  <div>06</div>
+</div>"
+place-self,place-self-start
+place-self,"<div class=""grid grid-cols-3 gap-4 ..."">
+  <div>01</div>
+  <div class=""place-self-start ..."">02</div>
+  <div>03</div>
+  <div>04</div>
+  <div>05</div>
+  <div>06</div>
+</div>"
+place-self,place-self-center
+place-self,"<div class=""grid grid-cols-3 gap-4 ..."">
+  <div>01</div>
+  <div class=""place-self-center ..."">02</div>
+  <div>03</div>
+  <div>04</div>
+  <div>05</div>
+  <div>06</div>
+</div>"
+place-self,place-self-end
+place-self,"<div class=""grid grid-cols-3 gap-4 ..."">
+  <div>01</div>
+  <div class=""place-self-end ..."">02</div>
+  <div>03</div>
+  <div>04</div>
+  <div>05</div>
+  <div>06</div>
+</div>"
+place-self,place-self-stretch
+place-self,"<div class=""grid grid-cols-3 gap-2 ..."">
+  <div>01</div>
+  <div class=""place-self-stretch ..."">02</div>
+  <div>03</div>
+  <div>04</div>
+  <div>05</div>
+  <div>06</div>
+</div>"
+place-self,hover:place-self-end
+place-self,place-self-end
+place-self,"<div class=""place-self-start hover:place-self-end"">
+  <!-- ... -->
+</div>
+"
+place-self,md:place-self-end
+place-self,place-self-end
+place-self,"<div class=""place-self-start md:place-self-end"">
+  <!-- ... -->
+</div>
+"
