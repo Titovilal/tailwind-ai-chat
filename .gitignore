@@ -1,0 +1,2 @@
+#Ignore local environement
+.env/
