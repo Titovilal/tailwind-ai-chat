@@ -1,0 +1,758 @@
+padding,p{t|r|b|l}-{size}
+padding,pt-6
+padding,1.5rem
+padding,pr-4
+padding,1rem
+padding,pb-8
+padding,2rem
+padding,pl-2
+padding,0.5rem
+padding,"<div class=""pt-6 ..."">pt-6</div>
+<div class=""pr-4 ..."">pr-4</div>
+<div class=""pb-8 ..."">pb-8</div>
+<div class=""pl-2 ..."">pl-2</div>"
+padding,px-{size}
+padding,"<div class=""px-8 ..."">px-8</div>"
+padding,py-{size}
+padding,"<div class=""py-8 ..."">py-8</div>"
+padding,p-{size}
+padding,"<div class=""p-8 ..."">p-8</div>"
+padding,ps-*
+padding,pe-*
+padding,padding-inline-start
+padding,padding-inline-end
+padding,"<div dir=""ltr"">
+  <div class=""ps-8 ..."">ps-8</div>
+  <div class=""pe-8 ..."">pe-8</div>
+<div>
+
+<div dir=""rtl"">
+  <div class=""ps-8 ..."">ps-8</div>
+  <div class=""pe-8 ..."">pe-8</div>
+<div>"
+padding,hover:py-8
+padding,py-8
+padding,"<div class=""py-4 hover:py-8"">
+  <!-- ... -->
+</div>
+"
+padding,md:py-8
+padding,py-8
+padding,"<div class=""py-4 md:py-8"">
+  <!-- ... -->
+</div>
+"
+padding,theme.spacing
+padding,theme.extend.spacing
+padding,tailwind.config.js
+padding,"module.exports = {
+  theme: {
+    extend: {
+      spacing: {
+        '5px': '5px',
+      }
+    }
+  }
+}
+"
+padding,theme.padding
+padding,theme.extend.padding
+padding,tailwind.config.js
+padding,"module.exports = {
+  theme: {
+    extend: {
+      padding: {
+        '5px': '5px',
+      }
+    }
+  }
+}
+"
+padding,padding
+padding,"<div class=""p-[5px]"">
+  <!-- ... -->
+</div>
+"
+margin,m{t|r|b|l}-{size}
+margin,mt-6
+margin,1.5rem
+margin,mr-4
+margin,1rem
+margin,mb-8
+margin,2rem
+margin,ml-2
+margin,0.5rem
+margin,"<div class=""mt-6 ..."">mt-6</div>
+<div class=""mr-4 ..."">mr-4</div>
+<div class=""mb-8 ..."">mb-8</div>
+<div class=""ml-2 ..."">ml-2</div>"
+margin,mx-{size}
+margin,"<div class=""mx-8 ..."">mx-8</div>"
+margin,my-{size}
+margin,"<div class=""my-8 ..."">my-8</div>"
+margin,m-{size}
+margin,"<div class=""m-8 ..."">m-8</div>"
+margin,"<div class=""w-36 h-16 bg-sky-400 opacity-20 ...""></div>
+<div class=""-mt-8 bg-sky-300 ..."">-mt-8</div>"
+margin,ms-*
+margin,me-*
+margin,margin-inline-start
+margin,margin-inline-end
+margin,"<div dir=""ltr"">
+  <div class=""ms-8 ..."">ms-8</div>
+  <div class=""me-8 ..."">me-8</div>
+<div>
+
+<div dir=""rtl"">
+  <div class=""ms-8 ..."">ms-8</div>
+  <div class=""me-8 ..."">me-8</div>
+<div>"
+margin,hover:mt-8
+margin,mt-8
+margin,"<div class=""mt-4 hover:mt-8"">
+  <!-- ... -->
+</div>
+"
+margin,md:mt-8
+margin,mt-8
+margin,"<div class=""mt-4 md:mt-8"">
+  <!-- ... -->
+</div>
+"
+margin,theme.spacing
+margin,theme.extend.spacing
+margin,tailwind.config.js
+margin,"module.exports = {
+  theme: {
+    extend: {
+      spacing: {
+        '5px': '5px',
+      }
+    }
+  }
+}
+"
+margin,theme.margin
+margin,theme.extend.margin
+margin,tailwind.config.js
+margin,"module.exports = {
+  theme: {
+    extend: {
+      margin: {
+        '5px': '5px',
+      }
+    }
+  }
+}
+"
+margin,margin
+margin,"<div class=""m-[5px]"">
+  <!-- ... -->
+</div>
+"
+space,space-x-{amount}
+space,"<div class=""flex space-x-4 ..."">
+  <div>01</div>
+  <div>02</div>
+  <div>03</div>
+</div>"
+space,space-y-{amount}
+space,"<div class=""flex flex-col space-y-4 ..."">
+  <div>01</div>
+  <div>02</div>
+  <div>03</div>
+</div>"
+space,flex-row-reverse
+space,flex-col-reverse
+space,space-x-reverse
+space,space-y-reverse
+space,"<div class=""flex flex-row-reverse space-x-4 space-x-reverse ..."">
+  <div>01</div>
+  <div>02</div>
+  <div>03</div>
+</div>"
+space,"<div class=""flex -space-x-4 ..."">
+  <!-- ... -->
+</div>"
+space,"<div class=""flow-root"">
+  <div class=""-m-2 flex flex-wrap"">
+    <div class=""m-2 ...""></div>
+    <div class=""m-2 ...""></div>
+    <div class=""m-2 ...""></div>
+  </div>
+</div>"
+space,space-*
+space,hover:space-x-8
+space,space-x-8
+space,"<div class=""flex space-x-2 hover:space-x-8"">
+  <!-- ... -->
+</div>
+"
+space,md:space-x-8
+space,space-x-8
+space,"<div class=""flex space-x-2 md:space-x-8"">
+  <!-- ... -->
+</div>
+"
+space,theme.spacing
+space,theme.extend.spacing
+space,tailwind.config.js
+space,"module.exports = {
+  theme: {
+    extend: {
+      spacing: {
+        '5px': '5px',
+      }
+    }
+  }
+}
+"
+space,theme.space
+space,theme.extend.space
+space,tailwind.config.js
+space,"module.exports = {
+  theme: {
+    extend: {
+      space: {
+        '5px': '5px',
+      }
+    }
+  }
+}
+"
+space,space-{x|y}
+space,"<div class=""space-y-[5px]"">
+  <!-- ... -->
+</div>
+"
+width,w-{number}
+width,w-px
+width,"<div class=""w-96 ..."">w-96</div>
+<div class=""w-80 ..."">w-80</div>
+<div class=""w-64 ..."">w-64</div>
+<div class=""w-48 ..."">w-48</div>
+<div class=""w-40 ..."">w-40</div>
+<div class=""w-32 ..."">w-32</div>
+<div class=""w-24 ..."">w-24</div>"
+width,w-{fraction}
+width,w-full
+width,"<div class=""flex ..."">
+  <div class=""w-1/2 ... "">w-1/2</div>
+  <div class=""w-1/2 ... "">w-1/2</div>
+</div>
+<div class=""flex ..."">
+  <div class=""w-2/5 ..."">w-2/5</div>
+  <div class=""w-3/5 ..."">w-3/5</div>
+</div>
+<div class=""flex ..."">
+  <div class=""w-1/3 ..."">w-1/3</div>
+  <div class=""w-2/3 ..."">w-2/3</div>
+</div>
+<div class=""flex ..."">
+  <div class=""w-1/4 ..."">w-1/4</div>
+  <div class=""w-3/4 ..."">w-3/4</div>
+</div>
+<div class=""flex ..."">
+  <div class=""w-1/5 ..."">w-1/5</div>
+  <div class=""w-4/5 ..."">w-4/5</div>
+</div>
+<div class=""flex ..."">
+  <div class=""w-1/6 ..."">w-1/6</div>
+  <div class=""w-5/6 ..."">w-5/6</div>
+</div>
+<div class=""w-full ..."">w-full</div>"
+width,w-screen
+width,"<div class=""w-screen"">
+  <!-- ... -->
+</div>"
+width,w-auto
+width,"<div class=""w-full md:w-auto"">
+  <!-- ... -->
+</div>"
+width,hover:w-full
+width,w-full
+width,"<div class=""w-1/2 hover:w-full"">
+  <!-- ... -->
+</div>
+"
+width,md:w-full
+width,w-full
+width,"<div class=""w-1/2 md:w-full"">
+  <!-- ... -->
+</div>
+"
+width,theme.spacing
+width,theme.extend.spacing
+width,tailwind.config.js
+width,"module.exports = {
+  theme: {
+    extend: {
+      spacing: {
+        '128': '32rem',
+      }
+    }
+  }
+}
+"
+width,theme.width
+width,tailwind.config.js
+width,"module.exports = {
+  theme: {
+    extend: {
+      width: {
+        '128': '32rem',
+      }
+    }
+  }
+}
+"
+width,width
+width,"<div class=""w-[32rem]"">
+  <!-- ... -->
+</div>
+"
+min-width,min-w-*
+min-width,"<div class=""w-96 ..."">
+  <div class=""min-w-80 ..."">min-w-80</div>
+  <div class=""min-w-64 ..."">min-w-64</div>
+  <div class=""min-w-48 ..."">min-w-48</div>
+  <div class=""min-w-40 ..."">min-w-40</div>
+  <div class=""min-w-32 ..."">min-w-32</div>
+  <div class=""min-w-24 ..."">min-w-24</div>
+  <div class=""min-w-full ..."">min-w-full</div>
+</div>"
+min-width,hover:min-w-0
+min-width,min-w-0
+min-width,"<div class=""w-24 min-w-full hover:min-w-0"">
+  <!-- ... -->
+</div>
+"
+min-width,md:min-w-0
+min-width,min-w-0
+min-width,"<div class=""w-24 min-w-full md:min-w-0"">
+  <!-- ... -->
+</div>
+"
+min-width,theme.spacing
+min-width,theme.extend.spacing
+min-width,tailwind.config.js
+min-width,"module.exports = {
+  theme: {
+    extend: {
+      spacing: {
+        '128': '32rem',
+      }
+    }
+  }
+}
+"
+min-width,min-width
+min-width,theme.minWidth
+min-width,tailwind.config.js
+min-width,"module.exports = {
+  theme: {
+    extend: {
+      minWidth: {
+        '128': '32rem',
+      }
+    }
+  }
+}
+"
+min-width,min-width
+min-width,"<div class=""min-w-[220px]"">
+  <!-- ... -->
+</div>
+"
+max-width,max-w-*
+max-width,"<div>
+  <div class=""w-full max-w-96 ..."">max-w-96</div>
+  <div class=""w-full max-w-80 ..."">max-w-80</div>
+  <div class=""w-full max-w-64 ..."">max-w-64</div>
+  <div class=""w-full max-w-48 ..."">max-w-48</div>
+  <div class=""w-full max-w-40 ..."">max-w-40</div>
+  <div class=""w-full max-w-32 ..."">max-w-32</div>
+  <div class=""w-full max-w-24 ..."">max-w-24</div>
+</div>"
+max-width,24rem
+max-width,max-w-*
+max-width,"<div class=""max-w-md ..."">
+  <!-- ... -->
+</div>"
+max-width,max-w-prose
+max-width,"<div class=""text-sm max-w-prose ..."">
+  <p>Oh yeah. It's the best part. It's crunchy, it's explosive, it's where the muffin breaks free of the pan and sort of does it's own thing. I'll tell you. That's a million dollar idea right there. Just sell the tops.</p>
+</div>
+
+<div class=""text-base max-w-prose ..."">
+  <p>Oh yeah. It's the best part. It's crunchy, it's explosive, it's where the muffin breaks free of the pan and sort of does it's own thing. I'll tell you. That's a million dollar idea right there. Just sell the tops.</p>
+</div>
+
+<div class=""text-xl max-w-prose ..."">
+  <p>Oh yeah. It's the best part. It's crunchy, it's explosive, it's where the muffin breaks free of the pan and sort of does it's own thing. I'll tell you. That's a million dollar idea right there. Just sell the tops.</p>
+</div>"
+max-width,max-w-screen-{breakpoint}
+max-width,theme.screens
+max-width,tailwind.config.js
+max-width,"<div class=""max-w-screen-2xl"">
+  <!-- ... -->
+</div>"
+max-width,hover:max-w-lg
+max-width,max-w-lg
+max-width,"<div class=""max-w-sm hover:max-w-lg"">
+  <!-- ... -->
+</div>
+"
+max-width,md:max-w-lg
+max-width,max-w-lg
+max-width,"<div class=""max-w-sm md:max-w-lg"">
+  <!-- ... -->
+</div>
+"
+max-width,theme.spacing
+max-width,theme.extend.spacing
+max-width,tailwind.config.js
+max-width,"module.exports = {
+  theme: {
+    extend: {
+      spacing: {
+        '128': '32rem',
+      }
+    }
+  }
+}
+"
+max-width,max-width
+max-width,theme.maxWidth
+max-width,tailwind.config.js
+max-width,"module.exports = {
+  theme: {
+    extend: {
+      maxWidth: {
+        '128': '32rem',
+      }
+    }
+  }
+}
+"
+max-width,max-width
+max-width,"<div class=""max-w-[220px]"">
+  <!-- ... -->
+</div>
+"
+height,h-{number}
+height,h-px
+height,"<div class=""h-96 ..."">h-96</div>
+<div class=""h-80 ..."">h-80</div>
+<div class=""h-64 ..."">h-64</div>
+<div class=""h-48 ..."">h-48</div>
+<div class=""h-40 ..."">h-40</div>
+<div class=""h-32 ..."">h-32</div>
+<div class=""h-24 ..."">h-24</div>"
+height,h-full
+height,"<div class=""h-48"">
+  <div class=""h-full ..."">
+    <!-- This element will have a height of `12rem` (h-48) -->
+  </div>
+</div>"
+height,h-screen
+height,"<div class=""h-screen"">
+  <!-- ... -->
+</div>"
+height,h-dvh
+height,"<div class=""h-dvh"">
+  <!-- ... -->
+</div>"
+height,h-lvh
+height,100vh
+height,"<div class=""h-lvh"">
+  <!-- ... -->
+</div>"
+height,h-svh
+height,"<div class=""h-svh"">
+  <!-- ... -->
+</div>"
+height,hover:h-full
+height,h-full
+height,"<div class=""h-8 hover:h-full"">
+  <!-- ... -->
+</div>
+"
+height,md:h-full
+height,h-full
+height,"<div class=""h-8 md:h-full"">
+  <!-- ... -->
+</div>
+"
+height,theme.spacing
+height,theme.extend.spacing
+height,tailwind.config.js
+height,"module.exports = {
+  theme: {
+    extend: {
+      spacing: {
+        '128': '32rem',
+      }
+    }
+  }
+}
+"
+height,theme.height
+height,tailwind.config.js
+height,"module.exports = {
+  theme: {
+    extend: {
+      height: {
+        '128': '32rem',
+      }
+    }
+  }
+}
+"
+height,height
+height,"<div class=""h-[32rem]"">
+  <!-- ... -->
+</div>
+"
+min-height,min-h-*
+min-height,"<div class=""h-96 ..."">
+  <div class=""min-h-80 ..."">min-h-80</div>
+  <div class=""min-h-64 ..."">min-h-64</div>
+  <div class=""min-h-48 ..."">min-h-48</div>
+  <div class=""min-h-40 ..."">min-h-40</div>
+  <div class=""min-h-32 ..."">min-h-32</div>
+  <div class=""min-h-24 ..."">min-h-24</div>
+  <div class=""min-h-full ..."">min-h-full</div>
+</div>"
+min-height,hover:min-h-full
+min-height,min-h-full
+min-height,"<div class=""h-24 min-h-0 hover:min-h-full"">
+  <!-- ... -->
+</div>
+"
+min-height,md:min-h-full
+min-height,min-h-full
+min-height,"<div class=""h-24 min-h-0 md:min-h-full"">
+  <!-- ... -->
+</div>
+"
+min-height,theme.spacing
+min-height,theme.extend.spacing
+min-height,tailwind.config.js
+min-height,"module.exports = {
+  theme: {
+    extend: {
+      spacing: {
+        '128': '32rem',
+      }
+    }
+  }
+}
+"
+min-height,min-height
+min-height,theme.minHeight
+min-height,tailwind.config.js
+min-height,"module.exports = {
+  theme: {
+    extend: {
+      minHeight: {
+        '128': '32rem',
+      }
+    }
+  }
+}
+"
+min-height,min-height
+min-height,"<div class=""min-h-[220px]"">
+  <!-- ... -->
+</div>
+"
+max-height,max-h-*
+max-height,"<div class=""h-96 ..."">
+  <div class=""h-full max-h-80 ..."">max-h-80</div>
+  <div class=""h-full max-h-64 ..."">max-h-64</div>
+  <div class=""h-full max-h-48 ..."">max-h-48</div>
+  <div class=""h-full max-h-40 ..."">max-h-40</div>
+  <div class=""h-full max-h-32 ..."">max-h-32</div>
+  <div class=""h-full max-h-24 ..."">max-h-24</div>
+  <div class=""h-full max-h-full ..."">max-h-full</div>
+</div>"
+max-height,hover:max-h-screen
+max-height,max-h-screen
+max-height,"<div class=""h-48 max-h-full hover:max-h-screen"">
+  <!-- ... -->
+</div>
+"
+max-height,md:max-h-screen
+max-height,max-h-screen
+max-height,"<div class=""h-48 max-h-full md:max-h-screen"">
+  <!-- ... -->
+</div>
+"
+max-height,theme.spacing
+max-height,theme.extend.spacing
+max-height,tailwind.config.js
+max-height,"module.exports = {
+  theme: {
+    extend: {
+      spacing: {
+        '128': '32rem',
+      }
+    }
+  }
+}
+"
+max-height,max-height
+max-height,theme.minHeight
+max-height,tailwind.config.js
+max-height,"module.exports = {
+  theme: {
+    extend: {
+      maxHeight: {
+        '128': '32rem',
+      }
+    }
+  }
+}
+"
+max-height,max-height
+max-height,"<div class=""max-h-[220px]"">
+  <!-- ... -->
+</div>
+"
+size,size-{number}
+size,size-px
+size,"<div class=""size-16 ..."">size-16</div>
+<div class=""size-20 ..."">size-20</div>
+<div class=""size-24 ..."">size-24</div>
+<div class=""size-32 ..."">size-32</div>
+<div class=""size-40 ..."">size-40</div>"
+size,size-full
+size,"<div class=""h-56 p-2 ..."">
+  <div class=""size-full ..."">size-full</div>
+</div>"
+size,size-auto
+size,"<div class=""size-full md:size-auto"">
+  <!-- ... -->
+</div>"
+size,hover:size-full
+size,size-full
+size,"<div class=""size-48 hover:size-full"">
+  <!-- ... -->
+</div>
+"
+size,md:size-full
+size,size-full
+size,"<div class=""size-48 md:size-full"">
+  <!-- ... -->
+</div>
+"
+size,theme.spacing
+size,theme.extend.spacing
+size,tailwind.config.js
+size,"module.exports = {
+  theme: {
+    extend: {
+      spacing: {
+        '128': '32rem',
+      }
+    }
+  }
+}
+"
+size,theme.size
+size,tailwind.config.js
+size,"module.exports = {
+  theme: {
+    extend: {
+      size: {
+        '128': '32rem',
+      }
+    }
+  }
+}
+"
+size,size
+size,"<div class=""size-[32rem]"">
+  <!-- ... -->
+</div>
+"
+aspect-ratio,aspect-{ratio}
+aspect-ratio,"<iframe class=""w-full aspect-video ..."" src=""https://www.youtube.com/...""></iframe>"
+aspect-ratio,aspect-{ratio}
+aspect-ratio,aspect-ratio
+aspect-ratio,hover:aspect-square
+aspect-ratio,aspect-square
+aspect-ratio,"<iframe class=""w-full aspect-video hover:aspect-square"" src=""https://www.youtube.com/...""></iframe>"
+aspect-ratio,md:aspect-square
+aspect-ratio,aspect-square
+aspect-ratio,"<iframe class=""w-full aspect-video md:aspect-square"" src=""https://www.youtube.com/...""></iframe>"
+aspect-ratio,aspect-ratio
+aspect-ratio,theme.aspectRatio
+aspect-ratio,theme.extend.aspectRatio
+aspect-ratio,tailwind.config.js
+aspect-ratio,"module.exports = {
+  theme: {
+    extend: {
+      aspectRatio: {
+        '4/3': '4 / 3',
+      },
+    }
+  }
+}
+"
+aspect-ratio,aspect-ratio
+aspect-ratio,"<iframe class=""w-full aspect-[4/3]"" src=""https://www.youtube.com/...""></iframe>"
+container,container
+container,max-width
+container,min-width
+container,mx-auto
+container,"<div class=""container mx-auto"">
+  <!-- ... -->
+</div>"
+container,px-{size}
+container,"<div class=""container mx-auto px-4"">
+  <!-- ... -->
+</div>"
+container,container
+container,md:container
+container,"<!-- Full-width fluid until the `md` breakpoint, then lock to container -->
+<div class=""md:container md:mx-auto"">
+  <!-- ... -->
+</div>"
+container,center
+container,true
+container,theme.container
+container,"/** @type {import('tailwindcss').Config} */
+module.exports = {
+  theme: {
+    container: {
+      center: true,
+    },
+  },
+}"
+container,padding
+container,theme.container
+container,"/** @type {import('tailwindcss').Config} */
+module.exports = {
+  theme: {
+    container: {
+      padding: '2rem',
+    },
+  },
+}"
+container,default
+container,"/** @type {import('tailwindcss').Config} */
+module.exports = {
+  theme: {
+    container: {
+      padding: {
+        DEFAULT: '1rem',
+        sm: '2rem',
+        lg: '4rem',
+        xl: '5rem',
+        '2xl': '6rem',
+      },
+    },
+  },
+};"
