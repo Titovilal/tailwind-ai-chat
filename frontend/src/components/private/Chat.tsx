@@ -1,6 +1,6 @@
 const Chat = () => {
     return (
-        <div>Chat</div>
+        <div className="bg-red-500">Chat</div>
     );
 }
 export default Chat;

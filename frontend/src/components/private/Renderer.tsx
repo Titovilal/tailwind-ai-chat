@@ -1,6 +1,6 @@
 const Renderer = () => {
     return (
-        <div>Renderer</div>
+        <div className="bg-green-500">Renderer</div>
     );
 }
 export default Renderer;

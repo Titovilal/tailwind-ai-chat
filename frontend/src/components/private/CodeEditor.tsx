@@ -1,6 +1,6 @@
 const CodeEditor = () => {
     return (
-        <div>CodeEditor</div>
+        <div className="bg-blue-500">CodeEditor</div>
     );
 }
 export default CodeEditor;
