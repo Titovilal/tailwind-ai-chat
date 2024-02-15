@@ -9,14 +9,14 @@ export default function CodePage() {
   return (
     <>
       <PanelGroup direction="horizontal">
-        <Panel>
+        <Panel minSize={4}>
           <PanelGroup direction="vertical">
-            <Panel>
+            <Panel minSize={4}>
               <CodeEditor />
             </Panel>
             <div style={{ backgroundColor: "black", height: "0.1rem" }} />
             <PanelResizeHandle />
-            <Panel>
+            <Panel minSize={4}>
               <Chat />
             </Panel>
           </PanelGroup>
