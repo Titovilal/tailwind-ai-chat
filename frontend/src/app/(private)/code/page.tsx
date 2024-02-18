@@ -1,18 +1,19 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import Chat from "@/components/private/Chat";
 import CodeEditor from "@/components/private/CodeEditor";
 import Renderer from "@/components/private/Renderer";
 import { Panel, PanelGroup, PanelResizeHandle } from "react-resizable-panels";
-
 export default function CodePage() {
+
+  const [postContent, setPostContent] = useState<string>('');
   return (
     <>
       <PanelGroup direction="horizontal">
         <Panel minSize={4}>
           <PanelGroup direction="vertical">
             <Panel minSize={4}>
-              <CodeEditor />
+              <CodeEditor postContent={postContent} setPostContent={setPostContent}/>
             </Panel>
             <div style={{ backgroundColor: "black", height: "0.1rem" }} />
             <PanelResizeHandle />
@@ -26,7 +27,7 @@ export default function CodePage() {
         <PanelResizeHandle />
 
         <Panel>
-          <Renderer />
+          <Renderer postContent={postContent}/>
         </Panel>
       </PanelGroup>
     </>
