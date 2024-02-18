@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <>
       <div>Hello world!</div>
-      <Link href="/example-route">Link a la ruta de ejemplo</Link>
+      <Link href="/code">Chat Tailwind</Link>
     </>
   );
 }
