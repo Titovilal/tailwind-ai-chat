@@ -20,5 +20,11 @@ const config: Config = {
     },
   },
   plugins: [],
+  // Only for PRODUCTION
+  // safelist: [
+  //   {
+  //     pattern: /./
+  //   },
+  //   ]
 };
 export default config;
