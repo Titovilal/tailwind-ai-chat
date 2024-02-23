@@ -10,7 +10,7 @@ export default function CodePage() {
   return (
     <>
       <PanelGroup direction="horizontal">
-        <Panel minSize={4}>
+        <Panel minSize={4} defaultSize={60}>
           <PanelGroup direction="vertical">
             <Panel minSize={4}>
               <CodeEditor postContent={postContent} setPostContent={setPostContent}/>
@@ -26,7 +26,7 @@ export default function CodePage() {
         <div style={{ backgroundColor: "black", width: "0.1rem" }} />
         <PanelResizeHandle />
 
-        <Panel>
+        <Panel defaultSize={40}>
           <Renderer postContent={postContent}/>
         </Panel>
       </PanelGroup>
