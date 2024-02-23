@@ -15,7 +15,6 @@
         "frontend/package.json": true,
         "frontend/package-lock.json": true,
         "frontend/next.config.mjs": true,
-        "frontend/tailwind.config.ts": true,
         "frontend/.gitignore": true,
         "frontend/README.md": true,
         "**/.env": true

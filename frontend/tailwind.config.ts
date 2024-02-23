@@ -13,9 +13,15 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      /*
+      Website to see the colors:
+      https://www.realtimecolors.com/dashboard?colors=ededed-33312B-FAB200-33312B-FAB200&fonts=Poppins-Poppins
+      */
       colors: {
-        blue_p: "#212D40",
-        blue_s: "#364156",
+        base: "#33312B", // background
+        sbase: "#2E2B25", // background items
+        primary: "#FAB200", // buttons
+        neutral: "#EDEDED", // text
       },
     },
   },
