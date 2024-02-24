@@ -11,7 +11,7 @@ export default function CodePage() {
     <>
       <PanelGroup direction="horizontal">
 
-        <Panel minSize={6} defaultSize={60}>
+        <Panel minSize={0} defaultSize={60}>
           <PanelGroup direction="vertical">
 
             <Panel minSize={6}>
