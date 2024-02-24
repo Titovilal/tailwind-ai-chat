@@ -18,10 +18,16 @@ const config: Config = {
       https://www.realtimecolors.com/dashboard?colors=ededed-33312B-FAB200-33312B-FAB200&fonts=Poppins-Poppins
       */
       colors: {
-        base: "#33312B", // background
-        sbase: "#2E2B25", // background items
+        base: "#2E2B25", // background
+        sbase: "#33312B", // background items
         primary: "#FAB200", // buttons
-        neutral: "#EDEDED", // text
+        neutral: "#FFFFFF", // text
+        // base:"#f6f7f6",
+        // sbase:"#f6f7f6",
+        // primary:"#2F2F30",
+        renderer:"#f6f7f6",
+        code:"#33312B",
+        
       },
     },
   },

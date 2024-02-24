@@ -10,25 +10,29 @@ export default function CodePage() {
   return (
     <>
       <PanelGroup direction="horizontal">
-        <Panel minSize={4} defaultSize={60}>
+
+        <Panel minSize={6} defaultSize={60}>
           <PanelGroup direction="vertical">
-            <Panel minSize={4}>
+
+            <Panel minSize={6}>
               <CodeEditor postContent={postContent} setPostContent={setPostContent}/>
             </Panel>
-            <div style={{ backgroundColor: "black", height: "0.1rem" }} />
-            <PanelResizeHandle />
-            <Panel minSize={4}>
+
+            <PanelResizeHandle className="bg-base h-4"/>
+
+            <Panel minSize={6} >
               <Chat />
             </Panel>
+
           </PanelGroup>
         </Panel>
 
-        <div style={{ backgroundColor: "black", width: "0.1rem" }} />
-        <PanelResizeHandle />
+        <PanelResizeHandle className="bg-base w-4"/>
 
         <Panel defaultSize={40}>
           <Renderer postContent={postContent}/>
         </Panel>
+
       </PanelGroup>
     </>
   );

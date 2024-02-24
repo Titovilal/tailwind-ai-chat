@@ -22,13 +22,14 @@ const Renderer: React.FC<RendererProps> = ({ postContent }) => {
     return { __html: htmlString };
   };
   return (
-    <>
-      <div className="bg-green-500">Renderer</div>
-      <div className="flex justify-center items-center h-full w-full">
+    <div className="bg-base pr-4 pb-4 pt-2 grid grid-rows-[2rem,1fr] min-h-screen">
+      <h2 className="text-neutral font-bold flex justify-center">Renderer</h2>
+
+      <div className="bg-neutral flex justify-center items-center rounded-lg">
         <div dangerouslySetInnerHTML={setTailwindCSS(tailwind)} />
         {postContent && htmlFrom(postContent)}
       </div>
-    </>
+    </div>
   );
 };
 export default Renderer;
