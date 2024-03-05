@@ -20,14 +20,20 @@ const config: Config = {
       colors: {
         base: "#2E2B25", // background
         sbase: "#33312B", // background items
-        primary: "#FAB200", // buttons
+        primary: {
+          "100": "#FFC533",
+          "200": "#D69A00",
+          "300": "#FFC020",
+          "400": "#FAB200",
+          "500": "#E8A600",
+          "600": "#D69A00",
+          DEFAULT: "#FAB200", // buttons
+        },
+
+        // primary: "#FAB200", // buttons
         neutral: "#FFFFFF", // text
-        // base:"#f6f7f6",
-        // sbase:"#f6f7f6",
-        // primary:"#2F2F30",
-        renderer:"#f6f7f6",
-        code:"#33312B",
-        
+        renderer: "#f6f7f6",
+        code: "#33312B",
       },
     },
   },

@@ -1,8 +1,8 @@
 "use client";
 import React, { useState } from "react";
-import Chat from "@/components/private/Chat";
-import CodeEditor from "@/components/private/CodeEditor";
-import Renderer from "@/components/private/Renderer";
+import Chat from "@/app/(private)/code/Chat";
+import CodeEditor from "@/app/(private)/code/CodeEditor";
+import Renderer from "@/app/(private)/code/Renderer";
 import { Panel, PanelGroup, PanelResizeHandle } from "react-resizable-panels";
 export default function CodePage() {
 
