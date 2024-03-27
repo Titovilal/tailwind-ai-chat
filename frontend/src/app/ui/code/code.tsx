@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 interface CodeEditorProps {
   postContent?: string;
   setPostContent?: (arg0: string) => void;
@@ -10,13 +8,12 @@ const CodeEditor: React.FC<CodeEditorProps> = ({
   setPostContent,
 }) => {
   return (
-    <div className="bg-sbase px-4 pb-4 pt-2 grid grid-rows-[2rem,1fr] h-full rounded-b-lg">
-      <h2 className="text-neutral font-bold flex justify-center">
-        Code Editor
-      </h2>
+    <div className="px-4 pb-4 pt-2 grid grid-rows-[2rem,1fr] h-full">
+      <h2 className="font-bold flex justify-center">Code Editor</h2>
       <textarea
-        className="text-neutral text-sm bg-code outline-none resize-none flex"
+        className="bg-background focus:border-primary-200 border-primary-300 rounded-xl p-2 text-sm outline-none resize-none flex"
         value={postContent}
+        placeholder="Enter your code here..."
         onChange={(e) =>
           setPostContent ? setPostContent(e.target.value) : undefined
         }

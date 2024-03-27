@@ -1,4 +1,4 @@
-import Sidebar from "@/components/private/Sidebar";
+import Sidebar from "../ui/layout/sidebar";
 
 export default function PrivateLayout({
   children,
@@ -6,25 +6,10 @@ export default function PrivateLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <>
-      <div
-        className="bg-base"
-        style={{
-          display: "grid",
-          gridTemplateColumns: `3rem 1fr`,
-          minHeight: "100vh",
-          gridTemplateAreas: `
-              "sidebar content"
-              `,
-        }}
-      >
-        <div className="bg-base" style={{ gridArea: "sidebar" }}>
-          <Sidebar />
-        </div>
-        <div className="bg-base" style={{ gridArea: "content" }}>
-          {children}
-        </div>
-      </div>
-    </>
+    <div className="grid grid-cols-[3.5rem,1fr] min-h-screen antialiased bg-background text-text">
+      <Sidebar />
+
+      <div>{children}</div>
+    </div>
   ); // Try main instead of div
 }
