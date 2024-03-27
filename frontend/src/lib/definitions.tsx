@@ -1,19 +1,28 @@
-export type Message = {
-    id: string,
-    user_id: string,
-    created_at: string,
-    content: string,
-    role: string
-}
-
-export type User = {
-    id: string,
-    name: string
-}
-
-export type Chat = {
-    id: string,
-    messages: Message[],
-    user_id: string,
-    title: string
-}
+export interface User {
+    id: string;
+    email: string;
+    name: string;
+    avatar: string;
+  };
+  
+export interface Message {
+    id: string;
+    content: string;
+    is_ai: boolean;
+  };
+  
+export interface Chat {
+    id: string;
+    messages: QA[];
+    user: User;
+    created_at: Date;
+  };
+  
+export interface QA {
+    id: string;
+    question: Message;
+    answer: Message;
+    created_at: Date;
+    status: "like" | "dislike" | "reviewed";
+    groundtruth: string;
+  };
