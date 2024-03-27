@@ -8,32 +8,25 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      },
-      /*
-      Website to see the colors:
-      https://www.realtimecolors.com/dashboard?colors=ededed-33312B-FAB200-33312B-FAB200&fonts=Poppins-Poppins
-      */
       colors: {
-        base: "#2E2B25", // background
-        sbase: "#33312B", // background items
-        primary: {
-          "100": "#FFC533",
-          "200": "#D69A00",
-          "300": "#FFC020",
-          "400": "#FAB200",
-          "500": "#E8A600",
-          "600": "#D69A00",
-          DEFAULT: "#FAB200", // buttons
+        background: {
+          "400": "#242426",
+          DEFAULT: "#131314", // "500"
         },
-
-        // primary: "#FAB200", // buttons
-        neutral: "#FFFFFF", // text
-        renderer: "#f6f7f6",
-        code: "#33312B",
+        text: "#E0E0E1",
+        primary: {
+          "200": "#4C4F51",
+          "300": "#3D3F41",
+          "400": "#2D2F30",
+          DEFAULT: "#1E1F20", // "500"
+          "600": "#1C1C1D",
+          "700": "#191A1B",
+        },
+        accent: {
+          "300": "#006BAD",
+          "400": "#005A91",
+          DEFAULT: "#004A77", // "500"
+        },
       },
     },
   },

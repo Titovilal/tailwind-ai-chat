@@ -1,13 +1,8 @@
-import IconG from "@/components/IconButtonG/IconButtonG";
-import Button from "../../../components/Button/Button";
-import ChatBar from "./ChatBar";
-
-import ChatMessage from "./ChatMessage";
-import IconButtonG from "@/components/IconButtonG/IconButtonG";
-import PrimaryButton from "@/components/Button/PrimaryButton";
+import ChatBar from "./chat-bar";
+import ChatMessage from "./chat-message";
 const Chat = () => {
   return (
-    <div className="bg-sbase px-4 pb-4 pt-2 grid grid-rows-[2rem,1fr] min-h-screen rounded-t-lg">
+    <div className=" px-4 pb-4 pt-2 grid grid-rows-[2rem,1fr] min-h-screen">
       <h2 className="text-neutral font-bold flex justify-center">Chat</h2>
       <div>
         <ChatMessage

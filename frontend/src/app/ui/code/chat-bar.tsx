@@ -1,4 +1,4 @@
-const ChatBar = () => {
+export default function ChatBar() {
   return (
     <div className="flex h-12 w-full bg-base rounded-xl">
       <div className="w-full px-2">
@@ -7,12 +7,10 @@ const ChatBar = () => {
 
       <button
         type="button"
-        className="text-white bg-primary hover:bg-gray-900 focus:outline-none rounded-xl px-2 items-center flex"
+        className="focus:outline-none rounded-xl px-2 items-center flex"
       >
         Dark
       </button>
     </div>
   );
-};
-
-export default ChatBar;
+}
