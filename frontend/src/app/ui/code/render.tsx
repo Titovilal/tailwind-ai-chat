@@ -22,8 +22,8 @@ const Renderer: React.FC<RendererProps> = ({ postContent }) => {
     return { __html: htmlString };
   };
   return (
-    <div className="pr-4 pb-4 pt-2 grid grid-rows-[2rem,1fr] min-h-screen">
-      <h2 className="font-bold flex justify-center">Renderer</h2>
+    <div className="bg-primary-200 pr-4 pb-4 pt-2 grid grid-rows-[2rem,1fr] min-h-screen">
+      <h2 className="font-bold text-background flex justify-center">Renderer</h2>
 
       <div className="flex justify-center items-center rounded-lg">
         <div dangerouslySetInnerHTML={setTailwindCSS(tailwind)} />

@@ -18,7 +18,7 @@
   }
   /* Input */
   .input-primary {
-    @apply bg-primary text-text border border-primary-400 focus:bg-primary-300;
+    @apply bg-primary text-text border border-primary-400 focus:border-primary-300;
   }
   .input-background {
     @apply bg-background text-text border border-primary focus:bg-primary;

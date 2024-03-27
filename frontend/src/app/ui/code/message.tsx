@@ -20,9 +20,9 @@ const ChatMessage: FC<ChatMessageProps> = ({ user, message, avatar_path }) => {
         <p>{message}</p>
         <div>
           <div className="flex gap-2">
-            <IconButton icon="thumb_up" />
-            <IconButton icon="thumb_down" />
-            <IconButton icon="content_copy" />
+            {/* <IconButton className="button-background" icon="thumb_up" />
+            <IconButton className="button-background" icon="thumb_down" />
+            <IconButton className="button-background" icon="content_copy" /> */}
           </div>
         </div>
       </div>
