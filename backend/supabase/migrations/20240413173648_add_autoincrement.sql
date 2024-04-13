@@ -1,18 +1,18 @@
 CREATE TABLE Users (
-  id INT PRIMARY KEY,
+  id SERIAL PRIMARY KEY,
   email VARCHAR(255) UNIQUE NOT NULL,
   name VARCHAR(255) NOT NULL,
   avatar VARCHAR(255)
 );
 
 CREATE TABLE Messages (
-  id INT PRIMARY KEY,
+  id SERIAL PRIMARY KEY,
   content TEXT NOT NULL,
   is_ai BOOLEAN NOT NULL
 );
 
 CREATE TABLE Chats (
-  id INT PRIMARY KEY,
+  id SERIAL PRIMARY KEY,
   user_id INT NOT NULL, 
   FOREIGN KEY (user_id) REFERENCES Users(id), 
   created_at DATE NOT NULL
@@ -21,7 +21,7 @@ CREATE TABLE Chats (
 CREATE TYPE status_type AS ENUM('like', 'dislike', 'reviewed');
 
 CREATE TABLE QA (
-  id INT PRIMARY KEY,
+  id SERIAL PRIMARY KEY,
   chat_id INT NOT NULL,  
   FOREIGN KEY (chat_id) REFERENCES Chats(id),  
   question_id INT NOT NULL,  
@@ -32,4 +32,3 @@ CREATE TABLE QA (
   status status_type NOT NULL,
   groundtruth TEXT
 );
-
