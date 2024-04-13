@@ -1,25 +1,25 @@
 type User = {
-  id: string;
+  id?: string;
   email: string;
   name: string;
   avatar: string;
 };
 
 type Message = {
-  id: string;
+  id?: string;
   content: string;
   is_ai: boolean;
 };
 
 type Chat = {
-  id: string;
+  id?: string;
   messages: QA[];
   user: User;
   created_at: Date;
 };
 
 type QA = {
-  id: string;
+  id?: string;
   question: Message;
   answer: Message;
   created_at: Date;
