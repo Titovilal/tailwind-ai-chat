@@ -1,29 +1,35 @@
 "use client";
 import React, { useState } from "react";
 import { Panel, PanelGroup, PanelResizeHandle } from "react-resizable-panels";
+import Chat from "./chat";
+import CodeEditor from "./code-editor";
+import Renderer from "./renderer";
 export default function CodePage() {
   const [postContent, setPostContent] = useState<string>("");
   return (
     <>
       <PanelGroup direction="horizontal">
-        <Panel minSize={0} defaultSize={60}>
+        <Panel minSize={0}>
           <PanelGroup direction="vertical">
-            <Panel minSize={6} className="border-r border-primary-200">
-              <div>a</div>
+            <Panel minSize={5} className="border-r  ">
+              <CodeEditor
+                postContent={postContent}
+                setPostContent={setPostContent}
+              />
             </Panel>
 
-            <PanelResizeHandle className="h-0 bg-primary" />
+            <PanelResizeHandle className="h-0 " />
 
-            <Panel minSize={6} className="border-t border-r border-primary-200">
-              <div>b</div>
+            <Panel minSize={8} className="border-t  border-r p-4">
+              <Chat />
             </Panel>
           </PanelGroup>
         </Panel>
 
-        <PanelResizeHandle className="w-0 bg-primary" />
+        <PanelResizeHandle className="w-0 " />
 
-        <Panel defaultSize={40}>
-          <div>c</div>
+        <Panel>
+          <Renderer postContent={postContent} />
         </Panel>
       </PanelGroup>
     </>
