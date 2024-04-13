@@ -1,4 +1,9 @@
-import { Copy, ThumbsDown, ThumbsUp } from "lucide-react";
+import {
+  Copy,
+  MessageCircleQuestion,
+  ThumbsDown,
+  ThumbsUp,
+} from "lucide-react";
 import React, { FC } from "react";
 
 interface ChatMessageProps {
@@ -39,13 +44,15 @@ const ChatMessage: FC<ChatMessageProps> = ({
           aria-label="Action bar"
           className="flex mt-3 opacity-0 group-hover:opacity-100"
         >
-          {!is_user && (
+          <Copy className="size-4 mr-4 text-muted-foreground hover:text-primary hover:scale-110 cursor-pointer" />
+          {!is_user ? (
             <>
               <ThumbsUp className="size-4 mr-4 text-muted-foreground hover:text-primary hover:scale-110 cursor-pointer" />
               <ThumbsDown className="size-4 mr-4 text-muted-foreground hover:text-primary hover:scale-110 cursor-pointer" />
             </>
+          ) : (
+            <MessageCircleQuestion className="size-4 mr-4 text-muted-foreground hover:text-primary hover:scale-110 cursor-pointer" />
           )}
-          <Copy className="size-4 text-muted-foreground hover:text-primary hover:scale-110 cursor-pointer" />
         </span>
       </div>
     </div>

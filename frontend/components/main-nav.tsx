@@ -11,6 +11,7 @@ import {
   History,
   Home,
   LogOut,
+  MessageCircleQuestion,
   Settings,
 } from "lucide-react";
 import Link from "next/link";
@@ -21,7 +22,7 @@ const MainNav = () => {
       <div className="space-y-4">
         <section className="grid gap-4">
           <Link
-            href="#"
+            href="/"
             className="group flex h-9 w-9 items-center justify-center rounded-lg text-background bg-primary transition-colors"
           >
             <Bot className="h-5 w-5 group-hover:scale-110" />
@@ -50,10 +51,22 @@ const MainNav = () => {
             </TooltipTrigger>
             <TooltipContent side="right">History</TooltipContent>
           </Tooltip>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <Link
+                href="questions"
+                className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-primary"
+              >
+                <MessageCircleQuestion className="h-5 w-5" />
+                <span className="sr-only">Questions</span>
+              </Link>
+            </TooltipTrigger>
+            <TooltipContent side="right">Questions</TooltipContent>
+          </Tooltip>
         </section>
       </div>
       <section className="grid gap-4">
-      <Tooltip>
+        <Tooltip>
           <TooltipTrigger asChild>
             <Link
               href="test"
