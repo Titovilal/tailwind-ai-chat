@@ -1,7 +1,29 @@
-import os
-from variables.variables import get_url, get_key
 from supabase import create_client, Client
+from openai import OpenAI
+from dotenv import load_dotenv
+import os
 
-url: str = get_url()
-key: str = get_key()
-database: Client = create_client(url, key)
+
+load_dotenv()
+
+database: Client = create_client(
+    os.environ.get("SUPABASE_URL"), os.environ.get("SUPABASE_KEY")
+)
+openai_client = OpenAI(api_key=os.environ.get("OPENAI_KEY"))
+
+
+def chat_gpt(
+    message: str,
+    client: OpenAI = openai_client,
+    role: str = "You are a helpful assistant.",
+    model: str = "gpt-3.5-turbo",
+) -> str:
+    completion = client.chat.completions.create(
+        model=model,
+        messages=[
+            {"role": "system", "content": role},
+            {"role": "user", "content": message},
+        ],
+    )
+
+    return f"{model}: {completion.choices[0].message.content}"
