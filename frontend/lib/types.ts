@@ -5,10 +5,15 @@ type User = {
   avatar: string;
 };
 
-type Message = {
+type UserMessage = {
   id?: string;
-  content: string;
-  is_ai: boolean;
+  question: string;
+};
+
+type AIMessage = {
+  id?: string;
+  explanation:string;
+  code:string;
 };
 
 type Chat = {
@@ -20,8 +25,8 @@ type Chat = {
 
 type QA = {
   id?: string;
-  question: Message;
-  answer: Message;
+  question: UserMessage;
+  answer: AIMessage;
   created_at: Date;
   status: "like" | "dislike" | "reviewed";
   groundtruth: string;
