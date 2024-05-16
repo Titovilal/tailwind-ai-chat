@@ -35,7 +35,7 @@ INSERT INTO AIMessage (explanation, code) VALUES
 ('We should go watch it together.', '<div className="bg-teal-500 p-4 rounded"></div>'),
 ('That would be great!', '<div className="bg-orange-500 p-4 rounded"></div>');
 
-INSERT INTO Chat (user_id, created_at) VALUES
+INSERT INTO Chat (account_id, created_at) VALUES
 (1, '2024-04-13'),
 (2, '2024-04-12'),
 (3, '2024-04-11'),

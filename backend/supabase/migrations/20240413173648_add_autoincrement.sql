@@ -12,14 +12,14 @@ CREATE TABLE UserMessage (
 
 CREATE TABLE AIMessage (
   id SERIAL PRIMARY KEY,
-  explanation TEXT NOT NULL
+  explanation TEXT NOT NULL,
   code TEXT NOT NULL
 );
 
 CREATE TABLE Chat (
   id SERIAL PRIMARY KEY,
   account_id INT NOT NULL, 
-  FOREIGN KEY (account) REFERENCES Account(id), 
+  FOREIGN KEY (account_id) REFERENCES Account(id), 
   created_at DATE NOT NULL
 );
 
