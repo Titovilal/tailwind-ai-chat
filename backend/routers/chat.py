@@ -15,9 +15,9 @@ class Chat(BaseModel):
 
 @router_chat.get("/")
 async def get_chats():
-    return  database.table('chats').select("*").execute()
+    return  database.table('chat').select("*").execute()
 
 @router_chat.post("/")
 async def create_chat(chat: Chat) -> Chat:
-     data, count = database.table('chats').insert({"user_id": Chat.user_id, "created_at": Chat.created_at}).execute()
+     data, count = database.table('chat').insert({"user_id": Chat.user_id, "created_at": Chat.created_at}).execute()
      return chat

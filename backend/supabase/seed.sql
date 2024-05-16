@@ -1,4 +1,4 @@
-INSERT INTO Users (email, name, avatar) VALUES
+INSERT INTO User (email, name, avatar) VALUES
 ('user1@example.com', 'John Doe', 'avatar1.jpg'),
 ('user2@example.com', 'Jane Smith', 'avatar2.jpg'),
 ('user3@example.com', 'Alice Johnson', 'avatar3.jpg'),
@@ -10,20 +10,32 @@ INSERT INTO Users (email, name, avatar) VALUES
 ('user9@example.com', 'Jennifer Taylor', 'avatar9.jpg'),
 ('user10@example.com', 'Daniel Anderson', 'avatar10.jpg');
 
-INSERT INTO Messages (content, is_ai) VALUES
-('Hello, how are you?', false),
-('I am doing well, thank you.', true),
-('What are your plans for the weekend?', false),
-('I am going hiking with friends.', true),
-('That sounds like fun!', false),
-('Yes, I am looking forward to it.', true),
-('Have you seen the latest movie?', false),
-('No, I haven''t had the chance yet.', true),
-('We should go watch it together.', false),
-('That would be great!', true);
+INSERT INTO UserMessage (question) VALUES
+('Hello, how are you?'),
+('I am doing well, thank you.'),
+('What are your plans for the weekend?'),
+('I am going hiking with friends.'),
+('That sounds like fun!'),
+('Yes, I am looking forward to it.'),
+('Have you seen the latest movie?'),
+('No, I haven''t had the chance yet.'),
+('We should go watch it together.'),
+('That would be great!');
 ;
 
-INSERT INTO Chats (user_id, created_at) VALUES
+INSERT INTO AIMessage (explanation, code) VALUES
+('Hello, how are you?', '<div className="bg-red-500 p-4 rounded"></div>'),
+('I am doing well, thank you.', '<div className="bg-green-500 p-4 rounded"></div>'),
+('What are your plans for the weekend?', '<div className="bg-blue-500 p-4 rounded"></div>'),
+('I am going hiking with friends.', '<div className="bg-yellow-500 p-4 rounded"></div>'),
+('That sounds like fun!', '<div className="bg-purple-500 p-4 rounded"></div>'),
+('Yes, I am looking forward to it.', '<div className="bg-pink-500 p-4 rounded"></div>'),
+('Have you seen the latest movie?', '<div className="bg-gray-500 p-4 rounded"></div>'),
+('No, I haven''t had the chance yet.', '<div className="bg-indigo-500 p-4 rounded"></div>'),
+('We should go watch it together.', '<div className="bg-teal-500 p-4 rounded"></div>'),
+('That would be great!', '<div className="bg-orange-500 p-4 rounded"></div>');
+
+INSERT INTO Chat (user_id, created_at) VALUES
 (1, '2024-04-13'),
 (2, '2024-04-12'),
 (3, '2024-04-11'),

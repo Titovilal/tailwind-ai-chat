@@ -15,9 +15,9 @@ class User(BaseModel):
 
 @router_user.get("/")
 async def get_users():
-    return  database.table('users').select("*").execute()
+    return  database.table('user').select("*").execute()
 
 @router_user.post("/")
 async def create_user(user: User) -> User:
-     data, count = database.table('users').insert({"email": user.email, "name": user.name}).execute()
+     data, count = database.table('user').insert({"email": user.email, "name": user.name}).execute()
      return user
