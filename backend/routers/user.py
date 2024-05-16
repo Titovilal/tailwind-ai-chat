@@ -3,21 +3,21 @@ from utils.config import database
 from pydantic import BaseModel, EmailStr
 
 router_user = APIRouter(
-    prefix="/user",
-    tags=["User"],
+    prefix="/account",
+    tags=["Account"],
     responses={404: {"description": "Not found"}},
 )
 
-class User(BaseModel):
+class Account(BaseModel):
     email: str
     name: str
     avatar: str
 
 @router_user.get("/")
-async def get_users():
-    return  database.table('user').select("*").execute()
+async def get_account():
+    return  database.table('account').select("*").execute()
 
 @router_user.post("/")
-async def create_user(user: User) -> User:
-     data, count = database.table('user').insert({"email": user.email, "name": user.name}).execute()
-     return user
+async def create_account(account: Account) -> Account:
+     data, count = database.table('account').insert({"email": account.email, "name": account.name}).execute()
+     return account

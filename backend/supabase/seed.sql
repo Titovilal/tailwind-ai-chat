@@ -1,4 +1,4 @@
-INSERT INTO User (email, name, avatar) VALUES
+INSERT INTO Account (email, name, avatar) VALUES
 ('user1@example.com', 'John Doe', 'avatar1.jpg'),
 ('user2@example.com', 'Jane Smith', 'avatar2.jpg'),
 ('user3@example.com', 'Alice Johnson', 'avatar3.jpg'),

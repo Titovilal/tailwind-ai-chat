@@ -1,4 +1,4 @@
-CREATE TABLE User (
+CREATE TABLE Account (
   id SERIAL PRIMARY KEY,
   email VARCHAR(255) UNIQUE NOT NULL,
   name VARCHAR(255) NOT NULL,
@@ -18,8 +18,8 @@ CREATE TABLE AIMessage (
 
 CREATE TABLE Chat (
   id SERIAL PRIMARY KEY,
-  user_id INT NOT NULL, 
-  FOREIGN KEY (user_id) REFERENCES User(id), 
+  account_id INT NOT NULL, 
+  FOREIGN KEY (account) REFERENCES Account(id), 
   created_at DATE NOT NULL
 );
 
