@@ -2,6 +2,7 @@ from fastapi import APIRouter
 from utils.config import database 
 from pydantic import BaseModel, EmailStr
 from datetime import date
+from utils.models import Chat
 
 router_chat = APIRouter(
     prefix="/chat",
@@ -9,9 +10,7 @@ router_chat = APIRouter(
     responses={404: {"description": "Not found"}},
 )
 
-class Chat(BaseModel):
-    account_id: int
-    created_at: date
+
 
 @router_chat.get("/")
 async def get_chats():
