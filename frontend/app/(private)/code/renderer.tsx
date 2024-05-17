@@ -1,5 +1,6 @@
 import parse from "html-react-parser";
 import DOMPurify from "dompurify";
+import { ScrollArea } from "@/components/ui/scroll-area";
 
 interface RendererProps {
   postContent?: string;
@@ -22,15 +23,13 @@ const Renderer: React.FC<RendererProps> = ({ postContent }) => {
     return { __html: htmlString };
   };
   return (
-    <div className="bg-primary-200 pr-4 pb-4 pt-2 grid grid-rows-[2rem,1fr] min-h-screen">
-      <h2 className="font-bold text-background flex justify-center">
-        Renderer
-      </h2>
+    <div className="px-4 pb-4 pt-2 grid grid-rows-[2rem,1fr] h-screen">
+      <h2 className="font-semibold flex justify-center tracking-tight">Renderer</h2>
 
-      <div className="flex justify-center items-center rounded-lg">
+      <ScrollArea className="overflow-auto px-4">
         <div dangerouslySetInnerHTML={setTailwindCSS(tailwind)} />
         {postContent && htmlFrom(postContent)}
-      </div>
+        </ScrollArea>
     </div>
   );
 };
