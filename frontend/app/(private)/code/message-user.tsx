@@ -4,14 +4,7 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import {
-    CircleHelp,
-  Copy,
-  CornerDownLeft,
-  MessageCircleQuestion,
-  ThumbsDown,
-  ThumbsUp,
-} from "lucide-react";
+import { CircleHelp, Copy } from "lucide-react";
 import React, { FC } from "react";
 
 interface ChatMessageProps {

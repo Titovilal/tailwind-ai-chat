@@ -1,4 +1,4 @@
-type User = {
+type Account = {
   id?: string;
   email: string;
   name: string;
@@ -12,21 +12,21 @@ type UserMessage = {
 
 type AIMessage = {
   id?: string;
-  explanation:string;
-  code:string;
+  explanation: string;
+  code: string;
 };
 
 type Chat = {
   id?: string;
-  messages: QA[];
-  user: User;
+  account_id: string;
   created_at: Date;
 };
 
 type QA = {
   id?: string;
-  question: UserMessage;
-  answer: AIMessage;
+  question_id: string;
+  answer_id: string;
+  chat_id: string;
   created_at: Date;
   status: "like" | "dislike" | "reviewed";
   groundtruth: string;
