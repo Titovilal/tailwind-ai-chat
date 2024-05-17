@@ -36,25 +36,26 @@ INSERT INTO AIMessage (explanation, code) VALUES
 ('That would be great!', '<div className="bg-orange-500 p-4 rounded"></div>');
 
 INSERT INTO Chat (account_id, created_at) VALUES
-(1, '2024-04-13'),
-(2, '2024-04-12'),
-(3, '2024-04-11'),
-(4, '2024-04-10'),
-(5, '2024-04-09'),
-(6, '2024-04-08'),
-(7, '2024-04-07'),
-(8, '2024-04-06'),
-(9, '2024-04-05'),
-(10, '2024-04-04');
+(1, '2024-04-13 00:00:00'),
+(2, '2024-04-12 00:00:00'),
+(3, '2024-04-11 00:00:00'),
+(4, '2024-04-10 00:00:00'),
+(5, '2024-04-09 00:00:00'),
+(6, '2024-04-08 00:00:00'),
+(7, '2024-04-07 00:00:00'),
+(8, '2024-04-06 00:00:00'),
+(9, '2024-04-05 00:00:00'),
+(10, '2024-04-04 00:00:00');
+
 
 INSERT INTO QA (chat_id, question_id, answer_id, created_at, status, groundtruth) VALUES
-(1, 1, 1, '2024-04-13', 'reviewed', 'Sample ground truth 1'),
-(2, 2, 2, '2024-04-12', 'like', 'Sample ground truth 2'),
-(3, 3, 3, '2024-04-11', 'dislike', 'Sample ground truth 3'),
-(4, 4, 4, '2024-04-10', 'reviewed', 'Sample ground truth 4'),
-(5, 5, 5, '2024-04-09', 'like', 'Sample ground truth 5'),
-(1, 6, 6, '2024-04-13', 'dislike', 'Sample ground truth 6'),
-(2, 7, 7, '2024-04-12', 'reviewed', 'Sample ground truth 7'),
-(3, 8, 8, '2024-04-11', 'like', 'Sample ground truth 8'),
-(4, 9, 9, '2024-04-10', 'dislike', 'Sample ground truth 9'),
-(5, 10, 10, '2024-04-09', 'reviewed', 'Sample ground truth 10');
+(1, 1, 1, '2024-04-13 00:00:00', 'reviewed', 'Sample ground truth 1'),
+(2, 2, 2, '2024-04-12 00:00:00', 'like', 'Sample ground truth 2'),
+(3, 3, 3, '2024-04-11 00:00:00', 'dislike', 'Sample ground truth 3'),
+(4, 4, 4, '2024-04-10 00:00:00', 'reviewed', 'Sample ground truth 4'),
+(5, 5, 5, '2024-04-09 00:00:00', 'like', 'Sample ground truth 5'),
+(1, 6, 6, '2024-04-13 00:00:00', 'dislike', 'Sample ground truth 6'),
+(2, 7, 7, '2024-04-12 00:00:00', 'reviewed', 'Sample ground truth 7'),
+(3, 8, 8, '2024-04-11 00:00:00', 'like', 'Sample ground truth 8'),
+(4, 9, 9, '2024-04-10 00:00:00', 'dislike', 'Sample ground truth 9'),
+(5, 10, 10, '2024-04-09 00:00:00', 'reviewed', 'Sample ground truth 10');

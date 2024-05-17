@@ -20,7 +20,7 @@ CREATE TABLE Chat (
   id SERIAL PRIMARY KEY,
   account_id INT NOT NULL, 
   FOREIGN KEY (account_id) REFERENCES Account(id), 
-  created_at DATE NOT NULL
+  created_at TIMESTAMP NOT NULL
 );
 
 CREATE TYPE status_type AS ENUM('like', 'dislike', 'reviewed');
@@ -33,7 +33,7 @@ CREATE TABLE QA (
   FOREIGN KEY (question_id) REFERENCES UserMessage(id), 
   answer_id INT NOT NULL,  
   FOREIGN KEY (answer_id) REFERENCES AIMessage(id),  
-  created_at DATE NOT NULL,
+  created_at TIMESTAMP NOT NULL,
   status status_type NOT NULL,
   groundtruth TEXT
 );
