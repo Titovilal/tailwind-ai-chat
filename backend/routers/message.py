@@ -1,5 +1,8 @@
+from datetime import datetime
 from fastapi import APIRouter
-from utils.config import database 
+from backend.routers.chat import Chat, create_chat
+from backend.routers.qa import QA, create_qa
+from utils.config import chat_gpt, database 
 from pydantic import BaseModel, EmailStr
 
 router_message = APIRouter(
@@ -32,3 +35,15 @@ async def create_user_message(message: UserMessage) -> UserMessage:
 async def create_ai_message(message: AIMessage) -> AIMessage:
      data, count = database.table('aimessage').insert({"explanation": message.explanation, "code": message.code }).execute()
      return message
+
+@router_message.post("/submit") 
+async def get_response(chatId: str, question: str, code: str):
+    usermessage = UserMessage(question=question)
+    create_user_message(usermessage)
+    #aimessage = chat_gpt(question)
+    aimessage = AIMessage(explanation="Esto es un div", code='<div className="bg-red-500 p-4 rounded"></div>')
+    create_ai_message(aimessage)
+    qa = QA(chat_id=chatId, question_id=usermessage.id, answer_id=aimessage.id, created_at=datetime.now())
+    create_qa(qa)
+
+    return aimessage

@@ -10,7 +10,7 @@ router_chat = APIRouter(
 )
 
 class Chat(BaseModel):
-    user_id: int
+    account_id: int
     created_at: date
 
 @router_chat.get("/")
@@ -19,5 +19,5 @@ async def get_chats():
 
 @router_chat.post("/")
 async def create_chat(chat: Chat) -> Chat:
-     data, count = database.table('chat').insert({"user_id": Chat.user_id, "created_at": Chat.created_at}).execute()
+     data, count = database.table('chat').insert({"account_id": Chat.account_id, "created_at": Chat.created_at}).execute()
      return chat
