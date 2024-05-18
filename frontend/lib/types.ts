@@ -1,10 +1,3 @@
-type Account = {
-  id?: string;
-  email: string;
-  name: string;
-  avatar: string;
-};
-
 type UserMessage = {
   id?: string;
   question: string;
@@ -16,18 +9,25 @@ type AIMessage = {
   code: string;
 };
 
-type Chat = {
-  id?: string;
-  account_id: string;
-  created_at: Date;
-};
-
 type QA = {
   id?: string;
-  question_id: string;
-  answer_id: string;
-  chat_id: string;
+  question?: UserMessage;
+  answer?: AIMessage;
+  created_at?: Date;
+  status?: "like" | "dislike" | "reviewed";
+  groundtruth?: string;
+};
+
+type Chat = {
+  id?: string;
   created_at: Date;
-  status: "like" | "dislike" | "reviewed";
-  groundtruth: string;
+  messages: QA[];
+};
+
+type Account = {
+  id?: string;
+  email: string;
+  name: string;
+  avatar: string;
+  chats?: Chat[];
 };

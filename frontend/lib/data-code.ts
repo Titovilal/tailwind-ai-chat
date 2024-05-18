@@ -1,10 +1,8 @@
-import ENDPOINTS from "./utils";
-
 export async function submitQuestion(
   chatId: string,
   question: string,
   code: string
-): Promise<AIMessage> {
+) {
   const url = "http://localhost:8001/message/submit";
   const headers = {
     "Content-Type": "application/json",
@@ -16,23 +14,51 @@ export async function submitQuestion(
     code: code,
   });
 
+  let data = null;
+  let loading = false;
+  let error = null;
   try {
+    loading = true;
     const response = await fetch(url, {
       method: "POST",
       headers: headers,
       body: body,
     });
-    console.log(response);
-
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
-
-    const data = (await response.json()) as AIMessage;
-    console.log(data);
-    return data;
-  } catch (error) {
-    console.error("Failed to submit question: ", error);
-    throw error;
+    data = (await response.json()) as AIMessage;
+  } catch (err) {
+    error = err;
+  } finally {
+    loading = false;
   }
+  return { data, loading, error };
+}
+
+export async function submitQuestionTest(
+  chatId: string,
+  question: string,
+  code: string
+): Promise<QA | null> {
+  let data = null;
+
+  try {
+    await new Promise((resolve) => setTimeout(resolve, 3000));
+    data = {
+      id: "789",
+      question: {
+        id: "456",
+        question: "",
+      },
+      answer: {
+        id: "123",
+        code: "nuevo codigo",
+        explanation: "porque lo digo yo",
+      },
+    };
+  } catch (err: any) {
+    console.error("Something went wrong: ", err);
+  }
+  return data;
 }

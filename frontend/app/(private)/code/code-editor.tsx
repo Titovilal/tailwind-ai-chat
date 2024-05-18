@@ -37,7 +37,7 @@ const CodeEditor: React.FC<CodeEditorProps> = ({
         </Tooltip>
       </span>
       <Textarea
-        className="resize-none border focus-visible:ring-0  focus-visible:ring-offset-0 focus-within:ring-1 focus-within:ring-ring "
+        className="resize-none border focus-visible:ring-offset-0 focus-within:ring-1 focus-within:ring-ring "
         value={postContent}
         id="message"
         placeholder="Enter your code here..."

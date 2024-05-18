@@ -28,7 +28,7 @@ const MeesageUser: FC<ChatMessageProps> = ({ user, message }) => {
 
         <span
           aria-label="Action bar"
-          className="flex mt-3 opacity-0 group-hover:opacity-100"
+          className="flex my-2 opacity-0 group-hover:opacity-100"
         >
           <Tooltip>
             <TooltipTrigger asChild className="focus:outline-none">
