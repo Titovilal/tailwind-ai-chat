@@ -16,7 +16,7 @@ const CodeEditor: React.FC<CodeEditorProps> = ({
   setPostContent,
 }) => {
   return (
-    <div className="px-4 pb-4 pt-2 grid grid-rows-[2rem,1fr] h-full">
+    <div className="px-4 pb-4 grid grid-rows-[2rem,1fr] h-full">
       <span className="flex justify-center items-center text-muted-foreground gap-4">
         <Tooltip>
           <TooltipTrigger asChild className="focus:outline-none">

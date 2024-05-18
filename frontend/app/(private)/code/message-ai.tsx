@@ -16,7 +16,7 @@ import React, { FC } from "react";
 interface ChatMessageProps {
   message: string;
 }
-const MeesageAi: FC<ChatMessageProps> = ({ message }) => {
+const MessageAi: FC<ChatMessageProps> = ({ message }) => {
   return (
     <div aria-label="Chat message" className="group">
       <div aria-label="Message column" className="mt-1 ">
@@ -32,7 +32,7 @@ const MeesageAi: FC<ChatMessageProps> = ({ message }) => {
 
         <span
           aria-label="Action bar"
-          className="flex my-2 opacity-0 group-hover:opacity-100"
+          className="flex mb-2 mt-1 opacity-0 group-hover:opacity-100"
         >
           <Tooltip>
             <TooltipTrigger asChild className="focus:outline-none">
@@ -71,4 +71,4 @@ const MeesageAi: FC<ChatMessageProps> = ({ message }) => {
     </div>
   );
 };
-export default MeesageAi;
+export default MessageAi;

@@ -20,7 +20,7 @@ export default function CodePage() {
 
             <PanelResizeHandle className="h-0 " />
 
-            <Panel minSize={10} className="border-t  border-r p-4">
+            <Panel minSize={12} className="border-t  border-r ">
               <Chat />
             </Panel>
           </PanelGroup>

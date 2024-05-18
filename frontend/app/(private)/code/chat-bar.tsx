@@ -1,25 +1,31 @@
 import { MessageCirclePlus, SendHorizonal } from "lucide-react";
 import { Textarea } from "@/components/ui/textarea";
 import { useState } from "react";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 const ChatBar = ({
   onSubmit,
   onClear,
+  loading,
 }: {
   onSubmit: (question: string) => void;
   onClear: () => void;
+  loading: boolean;
 }) => {
   const [question, setQuestion] = useState("");
 
   const handleKeyDown = (event: React.KeyboardEvent) => {
     if (event.key === "Enter" && event.shiftKey) {
-      // Inserta un salto de línea cuando se presiona Control + Enter
+      event.preventDefault();
       setQuestion((prevQuestion) => prevQuestion + "\n");
-      event.preventDefault();
     } else if (event.key === "Enter") {
-      // Envía el mensaje cuando se presiona Enter
-      handleSubmit();
       event.preventDefault();
+      if (loading) return;
+      handleSubmit();
     } else if (event.ctrlKey && event.key === "l") {
       onClear();
       event.preventDefault();
@@ -41,9 +47,17 @@ const ChatBar = ({
         onKeyDown={handleKeyDown}
       />
       <div className="grid">
-        <button className="p-2 group focus:outline-none" onClick={onClear}>
-          <MessageCirclePlus className="h-4 w-4 group-hover:scale-110 group-hover:text-primary text-muted-foreground" />
-        </button>
+        <Tooltip>
+          <TooltipTrigger asChild className="focus:outline-none">
+            <button className="p-2 group focus:outline-none" onClick={onClear}>
+              <MessageCirclePlus className="h-4 w-4 group-hover:scale-110 group-hover:text-primary text-muted-foreground" />
+            </button>
+          </TooltipTrigger>
+          <TooltipContent className="text-muted-foreground">
+            New chat
+          </TooltipContent>
+        </Tooltip>
+
         <button className="p-2 group focus:outline-none" onClick={handleSubmit}>
           <SendHorizonal className="h-4 w-4 group-hover:scale-110 group-hover:text-primary text-muted-foreground" />
         </button>

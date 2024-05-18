@@ -29,19 +29,19 @@ const Renderer: React.FC<RendererProps> = ({ postContent }) => {
     return { __html: htmlString };
   };
   return (
-    <div className="px-4 pb-4 pt-2 grid grid-rows-[2rem,1fr] h-screen relative">
-      <h2 className="font-semibold text-muted-foreground flex justify-center tracking-tight">
-        Renderer
-      </h2>
-      <Tooltip>
-        <TooltipTrigger asChild className="focus:outline-none">
-          <RotateCcw className="h-4 w-4 absolute top-3 left-3 text-muted-foreground hover:text-primary hover:scale-110 cursor-pointer" />
-        </TooltipTrigger>
-        <TooltipContent className="text-muted-foreground">
-          Reset layer
-        </TooltipContent>
-      </Tooltip>
-      <ScrollArea className="overflow-auto px-4">
+    <div className="px-4 pb-4 grid grid-rows-[2rem,1fr] h-screen relative">
+      <div className="absolute left-4 top-4">
+        <Tooltip>
+          <TooltipTrigger asChild className="focus:outline-none">
+            <RotateCcw className="h-4 w-4 text-muted-foreground hover:text-primary hover:scale-110 cursor-pointer" />
+          </TooltipTrigger>
+          <TooltipContent className="text-muted-foreground">
+            Reset layer
+          </TooltipContent>
+        </Tooltip>
+      </div>
+
+      <ScrollArea className="overflow-auto">
         <div dangerouslySetInnerHTML={setTailwindCSS(tailwind)} />
         {postContent && htmlFrom(postContent)}
       </ScrollArea>

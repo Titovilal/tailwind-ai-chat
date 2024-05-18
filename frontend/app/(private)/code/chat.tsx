@@ -18,7 +18,12 @@ const Chat = () => {
     setUserName("User");
     setMessagePairs([]);
   }, []);
-
+  useEffect(() => {
+    // Mover la barra de desplazamiento hacia abajo cuando aparezcan nuevos mensajes
+    if (scrollAreaRef.current) {
+      scrollAreaRef.current.scrollTop = scrollAreaRef.current.scrollHeight;
+    }
+  }, [messagePairs]); // Escuchar los cambios en messagePairs
   const createQuestion = (question: string) => {
     let newQA: QA = {
       id: "NEW",
@@ -62,8 +67,8 @@ const Chat = () => {
   };
 
   return (
-    <div className="grid grid-rows-[1fr,auto] h-full">
-      <ScrollArea className="px-4">
+    <div className="grid grid-rows-[1fr,auto] h-full px-4 pb-2 pt-1">
+      <ScrollArea className="pr-4" ref={scrollAreaRef}>
         {messagePairs.map((messagePair) => (
           <div key={messagePair.id}>
             {messagePair.question && (
@@ -79,7 +84,7 @@ const Chat = () => {
         ))}
         {loading && <MessageAiSkeleton />}
       </ScrollArea>
-      <ChatBar onSubmit={handleSubmit} onClear={() => setMessagePairs([])} />
+      <ChatBar onSubmit={handleSubmit} onClear={() => setMessagePairs([])} loading={loading}/>
     </div>
   );
 };

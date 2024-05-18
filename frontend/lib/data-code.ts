@@ -44,7 +44,7 @@ export async function submitQuestionTest(
   let data = null;
 
   try {
-    await new Promise((resolve) => setTimeout(resolve, 3000));
+    await new Promise((resolve) => setTimeout(resolve, 1200));
     data = {
       id: "789",
       question: {
