@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { Panel, PanelGroup, PanelResizeHandle } from "react-resizable-panels";
 import Chat from "./chat";
-import CodeEditor from "./code-editor";
+import CodeEditor from "./code";
 import Renderer from "./renderer";
 export default function CodePage() {
   const [postContent, setPostContent] = useState<string>("");
@@ -11,7 +11,7 @@ export default function CodePage() {
       <PanelGroup direction="horizontal">
         <Panel minSize={0}>
           <PanelGroup direction="vertical">
-            <Panel minSize={5} className="border-r  ">
+            <Panel minSize={4} className="border-r  ">
               <CodeEditor
                 postContent={postContent}
                 setPostContent={setPostContent}

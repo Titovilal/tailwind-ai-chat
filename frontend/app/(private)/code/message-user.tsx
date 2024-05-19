@@ -13,7 +13,7 @@ interface ChatMessageProps {
 }
 const MeesageUser: FC<ChatMessageProps> = ({ user, message }) => {
   return (
-    <div aria-label="Chat message" className="  group">
+    <div aria-label="Chat message" className="group">
       <div aria-label="Message column" className="mt-1 ">
         <Badge aria-label="User" variant="outline" className="mb-1.5 ">
           {user}

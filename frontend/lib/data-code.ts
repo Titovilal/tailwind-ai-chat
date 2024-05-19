@@ -54,7 +54,8 @@ export async function submitQuestionTest(
       answer: {
         id: "123",
         code: "nuevo codigo",
-        explanation: "porque lo digo yo",
+        explanation:
+          "lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
       },
     };
   } catch (err: any) {
