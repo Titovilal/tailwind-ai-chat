@@ -1,4 +1,3 @@
-// hooks/useChat.js
 import { useEffect, useState } from "react";
 import { submitQuestionTest } from "@/lib/data-code";
 
@@ -25,14 +24,14 @@ export const useChat = () => {
     setChatHistory((prevChatHistory) => [...prevChatHistory, newQA]);
   };
 
-  const addAnswerToChat = (qa: QA) => {
+  const addAnswerToChat = (answer: AIMessage) => {
     setChatHistory((prevChatHistory) => {
       return prevChatHistory.map((item) => {
         if (item.id === "NEW") {
           return {
             ...item,
-            id: qa.id,
-            answer: qa.answer,
+            id: answer.id,
+            answer: answer,
           };
         } else {
           return item;
