@@ -2,7 +2,11 @@ import { editor } from "monaco-editor";
 import { Monaco, Editor } from "@monaco-editor/react";
 import { useState } from "react";
 
-const CodeEditor = () => {
+type CodeEditorProps = {
+  code?: string;
+};
+
+const CodeEditor = ({  }: CodeEditorProps) => {
   const [code, setCode] = useState<string>("");
   const handleMount = (
     _editor: editor.IStandaloneCodeEditor,

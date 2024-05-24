@@ -7,15 +7,22 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 
-const ChatBar = ({
-  onSubmit,
-  onClear,
-  loading,
-}: {
-  onSubmit: (question: string) => void;
-  onClear: () => void;
-  loading: boolean;
-}) => {
+/*
+  ChatBar
+
+  Gestiona los eventos de teclado para la barra de chat:
+  Ctrl + K: Limpia la barra de chat.
+  Mayus + Enter: Añade un salto de linea.
+  Enter: Envia el texto al componente padre.
+*/
+
+type ChatBarProps = {
+  sendQuestion: (question: string) => void;
+  resetChat: () => void;
+  isLoading: boolean;
+};
+
+const ChatBar = ({ sendQuestion, resetChat, isLoading }: ChatBarProps) => {
   const [question, setQuestion] = useState("");
 
   const handleKeyDown = (event: React.KeyboardEvent) => {
@@ -24,16 +31,21 @@ const ChatBar = ({
       setQuestion((prevQuestion) => prevQuestion + "\n");
     } else if (event.key === "Enter") {
       event.preventDefault();
-      if (loading) return;
+      if (isLoading) return;
       handleSubmit();
-    } else if (event.ctrlKey && event.key === "l") {
-      onClear();
+    } else if (event.ctrlKey && event.key === "k") {
+      resetChat();
       event.preventDefault();
     }
   };
-  const handleSubmit = () => {
-    onSubmit(question);
+
+  const cleanBar = () => {
     setQuestion("");
+  };
+
+  const handleSubmit = () => {
+    sendQuestion(question);
+    cleanBar();
   };
 
   return (
@@ -49,7 +61,10 @@ const ChatBar = ({
       <div className="grid">
         <Tooltip>
           <TooltipTrigger asChild className="focus:outline-none">
-            <button className="p-2 group focus:outline-none" onClick={onClear}>
+            <button
+              className="p-2 group focus:outline-none"
+              onClick={resetChat}
+            >
               <MessageCirclePlus className="h-4 w-4 group-hover:scale-110 group-hover:text-primary text-muted-foreground" />
             </button>
           </TooltipTrigger>

@@ -4,34 +4,38 @@ import { Panel, PanelGroup, PanelResizeHandle } from "react-resizable-panels";
 import Chat from "./chat";
 import CodeEditor from "./code";
 import Renderer from "./renderer";
+import { useChat } from "@/hooks/useChat";
 export default function CodePage() {
-  const [postContent, setPostContent] = useState<string>("");
+  const [code, setCode] = useState<string>("");
+  const { chatHistory, isLoading, sendQuestion, resetChat } = useChat();
+
   return (
-    <>
-      <PanelGroup direction="horizontal">
-        <Panel minSize={0}>
-          <PanelGroup direction="vertical">
-            <Panel minSize={4} className="border-r  ">
-              <CodeEditor
-                postContent={postContent}
-                setPostContent={setPostContent}
-              />
-            </Panel>
+    <PanelGroup direction="horizontal">
+      <Panel defaultSize={50}>
+        <PanelGroup direction="vertical">
+          <Panel minSize={4} defaultSize={50} className="border-r">
+            <CodeEditor postContent={code} setPostContent={setCode} />
+          </Panel>
 
-            <PanelResizeHandle className="h-0 " />
+          <PanelResizeHandle className="h-0" />
 
-            <Panel minSize={12} className="border-t  border-r ">
-              <Chat />
-            </Panel>
-          </PanelGroup>
-        </Panel>
+          <Panel minSize={12} defaultSize={50} className="border-t  border-r ">
+            <Chat
+              accountName="Tailwind AI"
+              chatHistory={chatHistory}
+              isLoading={isLoading}
+              sendQuestion={sendQuestion}
+              resetChat={resetChat}
+            />
+          </Panel>
+        </PanelGroup>
+      </Panel>
 
-        <PanelResizeHandle className="w-0 " />
+      <PanelResizeHandle className="w-0 " />
 
-        <Panel>
-          <Renderer postContent={postContent} />
-        </Panel>
-      </PanelGroup>
-    </>
+      <Panel defaultSize={50}>
+        <Renderer code={code} />
+      </Panel>
+    </PanelGroup>
   );
 }

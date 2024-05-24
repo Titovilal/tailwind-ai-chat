@@ -1,30 +1,20 @@
 // hooks/useChat.js
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { submitQuestionTest } from "@/lib/data-code";
 
 export const useChat = () => {
-  const [messagePairs, setMessagePairs] = useState<QA[]>([]);
-  const [userName, setUserName] = useState<string>("");
-  const [loading, setLoading] = useState<boolean>(false);
-  const scrollAreaRef = useRef<HTMLDivElement>(null);
+  const [chatHistory, setChatHistory] = useState<QA[]>([]);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
 
   useEffect(() => {
-    setUserName("User");
-    setMessagePairs([]);
+    resetChat();
   }, []);
 
-  // ... el resto de tu código ...
+  const resetChat = () => {
+    setChatHistory([]);
+  };
 
-  useEffect(() => {
-    // Mover la barra de desplazamiento hacia abajo cuando aparezcan nuevos mensajes
-    if (scrollAreaRef.current) {
-      scrollAreaRef.current.scrollTop = scrollAreaRef.current.scrollHeight;
-    }
-  }, [messagePairs]); // Escuchar los cambios en messagePairs
-
-  // ... el resto de tu código ...
-
-  const createQuestion = (question: string) => {
+  const addQuestionToChat = (question: string) => {
     let newQA: QA = {
       id: "NEW",
       question: {
@@ -32,12 +22,12 @@ export const useChat = () => {
       },
       created_at: new Date(),
     };
-    setMessagePairs((prevMessagePairs) => [...prevMessagePairs, newQA]);
+    setChatHistory((prevChatHistory) => [...prevChatHistory, newQA]);
   };
 
-  const createAnswer = (qa: QA) => {
-    setMessagePairs((prevMessagePairs) => {
-      return prevMessagePairs.map((item) => {
+  const addAnswerToChat = (qa: QA) => {
+    setChatHistory((prevChatHistory) => {
+      return prevChatHistory.map((item) => {
         if (item.id === "NEW") {
           return {
             ...item,
@@ -51,24 +41,22 @@ export const useChat = () => {
     });
   };
 
-  const handleSubmit = async (question: string) => {
+  const sendQuestion = async (question: string) => {
     if (question === "") return;
-    createQuestion(question);
-    setLoading(true);
+    addQuestionToChat(question);
+    setIsLoading(true);
     let data = await submitQuestionTest("5", question, "este es el codigo");
     console.log(data);
     if (data != null) {
-      setLoading(false);
-      createAnswer(data);
+      setIsLoading(false);
+      addAnswerToChat(data);
     }
   };
 
   return {
-    scrollAreaRef,
-    messagePairs,
-    userName,
-    loading,
-    handleSubmit,
-    setMessagePairs,
+    chatHistory,
+    isLoading,
+    sendQuestion,
+    resetChat,
   };
 };
