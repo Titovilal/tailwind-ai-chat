@@ -26,4 +26,4 @@ def chat_gpt(
         ],
     )
 
-    return f"{model}: {completion.choices[0].message.content}"
+    return completion.choices[0].message.content

@@ -1,4 +1,4 @@
-export async function submitQuestion1(
+export async function submitQuestion(
   chatId: string,
   question: string,
   code: string

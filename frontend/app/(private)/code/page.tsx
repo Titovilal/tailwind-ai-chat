@@ -8,7 +8,6 @@ import { useChat } from "@/hooks/useChat";
 export default function CodePage() {
   const [code, setCode] = useState<string>("");
   const { chatHistory, isLoading, sendQuestion, resetChat } = useChat();
-
   return (
     <PanelGroup direction="horizontal">
       <Panel defaultSize={50}>

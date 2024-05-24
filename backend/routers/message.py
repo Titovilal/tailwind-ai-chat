@@ -4,7 +4,7 @@ from fastapi import APIRouter, HTTPException
 from utils.models import AIMessageResponse, UserMessage, AIMessage
 from .chat import Chat, create_chat
 from .qa import QA, create_qa
-from utils.config import database
+from utils.config import chat_gpt, database
 from pydantic import BaseModel, EmailStr
 from fastapi import Body
 
@@ -41,31 +41,39 @@ async def create_ai_message(message: AIMessage) -> int:
 
 @router_message.post("/submit")
 async def get_response(
-    aimessageId: str = Body(...), question: str = Body(...), code: str = Body(...)
+    chatId: str = Body(...), question: str = Body(...), code: str = Body(...)
 ) -> AIMessage:
-    
+    print(chatId, question, code)
     usermessage = UserMessage(question=question)
     account_id = await create_user_message(usermessage)
-    # aimessage = aimessage_gpt(question)
-    aimessage = AIMessageResponse(
-        explanation="Esto es un div",
+    # aimessage = chat_gpt(question)
+    aimessage = AIMessage(
+        explanation=chat_gpt(question),
         code='<div className="bg-red-500 p-4 rounded"></div>',
     )
     ai_id = await create_ai_message(aimessage)
-    aimessage.id = ai_id
+
+
+    aimessageresponse = AIMessageResponse(
+        id = ai_id,
+        explanation=aimessage.explanation,
+        code=aimessage.code
+    )
+    aimessageresponse.id = ai_id
+
 
     if not chatId:
          chatId = create_chat(account_id=account_id, created_at=datetime.now())
  
     qa = QA(
-        aimessage_id=chatId,
+        chat_id=chatId,
         question_id=account_id,
         answer_id=ai_id,
         created_at=datetime.now(),
-        status="reviewed",
+        status="like",
         groundtruth="paco",
     )
 
     await create_qa(qa)
 
-    return aimessage
+    return aimessageresponse

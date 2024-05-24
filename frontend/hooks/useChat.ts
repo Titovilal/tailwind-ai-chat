@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { submitQuestionTest } from "@/lib/data-code";
+import { submitQuestion } from "@/lib/data-code";
 
 export const useChat = () => {
   const [chatHistory, setChatHistory] = useState<QA[]>([]);
@@ -44,7 +44,7 @@ export const useChat = () => {
     if (question === "") return;
     addQuestionToChat(question);
     setIsLoading(true);
-    let data = await submitQuestionTest("5", question, "este es el codigo");
+    let data = await submitQuestion("5", question, "este es el codigo");
     console.log(data);
     if (data != null) {
       setIsLoading(false);
