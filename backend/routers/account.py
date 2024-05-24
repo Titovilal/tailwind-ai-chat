@@ -16,10 +16,8 @@ async def get_account():
 
 
 @router_account.post("/")
-async def create_account(account: Account) -> Account:
-    data, count = (
-        database.table("account")
-        .insert({"email": account.email, "name": account.name})
-        .execute()
-    )
-    return account
+async def create_account(account: Account) -> int:
+    message_data = account.model_dump()
+    response = database.table("qa").insert(message_data).execute()
+    account_id = response.data[0]["id"] 
+    return account_id

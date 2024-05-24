@@ -1,14 +1,20 @@
+from enum import Enum
+from typing import Optional
 from pydantic import BaseModel
 from datetime import datetime
 
+class StatusType(str, Enum):
+    like = 'like'
+    dislike = 'dislike'
+    reviewed = 'reviewed'
 
 class QA(BaseModel):
     chat_id: int
     question_id: int
     answer_id: int
     created_at: datetime
-    status: str
-    groundtruth: str
+    status: StatusType
+    groundtruth: Optional[str] = None
 
 
 class Chat(BaseModel):
@@ -16,10 +22,14 @@ class Chat(BaseModel):
     created_at: datetime
 
 
-class AIMessage(BaseModel):
+class AIMessageResponse(BaseModel):
+    id: int
     explanation: str
     code: str
 
+class AIMessage(BaseModel):
+    explanation: str
+    code: str
 
 class UserMessage(BaseModel):
     question: str
@@ -28,4 +38,4 @@ class UserMessage(BaseModel):
 class Account(BaseModel):
     email: str
     name: str
-    avatar: str
+    avatar: Optional[str] = None

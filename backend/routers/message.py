@@ -1,11 +1,12 @@
 from datetime import datetime
-from fastapi import APIRouter
+from fastapi import APIRouter, HTTPException
 
-from utils.models import UserMessage, AIMessage
+from utils.models import AIMessageResponse, UserMessage, AIMessage
 from .chat import Chat, create_chat
 from .qa import QA, create_qa
-from utils.config import chat_gpt, database
+from utils.config import database
 from pydantic import BaseModel, EmailStr
+from fastapi import Body
 
 router_message = APIRouter(
     prefix="/message",
@@ -25,44 +26,40 @@ async def get_ai_message():
 
 
 @router_message.post("/questions")
-async def create_user_message(message: UserMessage) -> UserMessage:
-    data, count = (
-        database.table("usermessage").insert({"question": message.question}).execute()
-    )
-    return data
-
+async def create_user_message(message: UserMessage) -> int:
+    message_data = message.model_dump()
+    response = database.table("usermessage").insert(message_data).execute()
+    aimessage_id = response.data[0]["id"] 
+    return aimessage_id
 
 @router_message.post("/responses")
-async def create_ai_message(message: AIMessage) -> AIMessage:
-    data, count = (
-        database.table("aimessage")
-        .insert({"explanation": message.explanation, "code": message.code})
-        .execute()
-    )
-    return data
-
-
-from fastapi import Body
-
+async def create_ai_message(message: AIMessage) -> int:
+    message_data = message.model_dump()
+    response = database.table("aimessage").insert(message_data).execute()
+    aimessage_id = response.data[0]["id"] 
+    return aimessage_id
 
 @router_message.post("/submit")
 async def get_response(
-    chatId: str = Body(...), question: str = Body(...), code: str = Body(...)
+    aimessageId: str = Body(...), question: str = Body(...), code: str = Body(...)
 ) -> AIMessage:
+    
     usermessage = UserMessage(question=question)
-    user_data = await create_user_message(usermessage)
-    user_id = user_data[1][0]["id"]
-    # aimessage = chat_gpt(question)
-    aimessage = AIMessage(
+    account_id = await create_user_message(usermessage)
+    # aimessage = aimessage_gpt(question)
+    aimessage = AIMessageResponse(
         explanation="Esto es un div",
         code='<div className="bg-red-500 p-4 rounded"></div>',
     )
-    ai_data = await create_ai_message(aimessage)
-    ai_id = ai_data[1][0]["id"]
+    ai_id = await create_ai_message(aimessage)
+    aimessage.id = ai_id
 
+    if not chatId:
+         chatId = create_chat(account_id=account_id, created_at=datetime.now())
+ 
     qa = QA(
-        chat_id=chatId,
-        question_id=user_id,
+        aimessage_id=chatId,
+        question_id=account_id,
         answer_id=ai_id,
         created_at=datetime.now(),
         status="reviewed",

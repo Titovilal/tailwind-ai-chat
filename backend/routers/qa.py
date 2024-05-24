@@ -1,4 +1,4 @@
-from fastapi import APIRouter
+from fastapi import APIRouter, HTTPException
 from utils.models import QA
 from utils.config import database
 from datetime import date
@@ -16,19 +16,9 @@ async def get_qa():
 
 
 @router_qa.post("/")
-async def create_qa(qa: QA) -> QA:
-    data, count = (
-        database.table("qa")
-        .insert(
-            {
-                "chat_id": qa.chat_id,
-                "question_id": qa.question_id,
-                "answer_id": qa.answer_id,
-                "created_at": qa.created_at.isoformat(),
-                "status": qa.status,
-                "groundtruth": qa.groundtruth,
-            }
-        )
-        .execute()
-    )
-    return qa
+async def create_qa(qa: QA) -> int:
+    message_data = qa.model_dump()
+    message_data["created_at"] = message_data["created_at"].isoformat()
+    response = database.table("qa").insert(message_data).execute()
+    qa_id = response.data[0]["id"] 
+    return qa_id
