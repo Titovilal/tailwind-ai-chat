@@ -1,4 +1,5 @@
 from datetime import datetime
+import json
 from fastapi import APIRouter, HTTPException
 
 from utils.models import AIMessageResponse, UserMessage, AIMessage
@@ -46,11 +47,21 @@ async def get_response(
     print(chatId, question, code)
     usermessage = UserMessage(question=question)
     account_id = await create_user_message(usermessage)
-    # aimessage = chat_gpt(question)
+
+    response = chat_gpt(question)
+    response_json = json.loads(response)
+    response_explanation = response_json['explanation']
+    response_code = response_json['code']
+
     aimessage = AIMessage(
-        explanation=chat_gpt(question),
-        code='<div className="bg-red-500 p-4 rounded"></div>',
+        explanation=response_explanation,
+        code=response_code,
     )
+    # aimessage = AIMessage(
+    #     explanation='Explicado',
+    #     code='<div className="bg-red-500 p-4 rounded"></div>',
+    # )
+
     ai_id = await create_ai_message(aimessage)
 
 
