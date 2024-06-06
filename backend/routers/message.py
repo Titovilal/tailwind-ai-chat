@@ -48,10 +48,10 @@ async def get_response(
     usermessage = UserMessage(question=question)
     account_id = await create_user_message(usermessage)
 
-    if not code:
+    if code == "":
         response = chat_gpt(question) 
     else:
-        response = chat_gpt("Question: " + question + "\n```html\n" + code + "\n```")
+        response = chat_gpt("Modify the following code" + "\n ```html\n" + code + "\n```" + "using this instruction: " + question)
         
     response_json = json.loads(response)
     response_explanation = response_json['explanation']

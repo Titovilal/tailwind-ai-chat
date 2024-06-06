@@ -19,8 +19,7 @@ export default function CodePage() {
           <PanelResizeHandle className="h-0" />
 
           <Panel minSize={12} defaultSize={50} className="border-t  border-r ">
-            <Chat accountName="Normal user"
-            setCode={setCode} />
+            <Chat accountName="Normal user" setCode={setCode} code={code} />
           </Panel>
         </PanelGroup>
       </Panel>

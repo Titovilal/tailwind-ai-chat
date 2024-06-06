@@ -1,4 +1,4 @@
-import { MessageCirclePlus, SendHorizonal } from "lucide-react";
+import { Code, MessageCirclePlus, Mic, SendHorizonal } from "lucide-react";
 import { Textarea } from "@/components/ui/textarea";
 import { useState } from "react";
 import {
@@ -6,6 +6,7 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import { Toggle } from "@/components/ui/toggle";
 
 /*
   ChatBar
@@ -17,13 +18,14 @@ import {
 */
 
 type ChatBarProps = {
-  sendQuestion: (question: string) => void;
+  sendQuestionBar: (question: string, withCode:boolean) => void;
   resetChat: () => void;
   isLoading: boolean;
 };
 
-const ChatBar = ({ sendQuestion, resetChat, isLoading }: ChatBarProps) => {
+const ChatBar = ({ sendQuestionBar, resetChat, isLoading }: ChatBarProps) => {
   const [question, setQuestion] = useState("");
+  const [usingCode, setUsingCode] = useState(false);
 
   const handleKeyDown = (event: React.KeyboardEvent) => {
     if (event.key === "Enter" && event.shiftKey) {
@@ -44,7 +46,7 @@ const ChatBar = ({ sendQuestion, resetChat, isLoading }: ChatBarProps) => {
   };
 
   const handleSubmit = () => {
-    sendQuestion(question);
+    sendQuestionBar(question, usingCode);
     cleanBar();
   };
 
@@ -58,24 +60,45 @@ const ChatBar = ({ sendQuestion, resetChat, isLoading }: ChatBarProps) => {
         onChange={(event) => setQuestion(event.target.value)}
         onKeyDown={handleKeyDown}
       />
-      <div className="grid">
-        <Tooltip>
-          <TooltipTrigger asChild className="focus:outline-none">
-            <button
-              className="p-2 group focus:outline-none"
-              onClick={resetChat}
-            >
-              <MessageCirclePlus className="h-4 w-4 group-hover:scale-110 group-hover:text-primary text-muted-foreground" />
-            </button>
-          </TooltipTrigger>
-          <TooltipContent className="text-muted-foreground">
-            New chat
-          </TooltipContent>
-        </Tooltip>
+      <div className="flex items-center gap-1">
+        <div className="grid">
+          <Tooltip>
+            <TooltipTrigger asChild className="focus:outline-none">
+              <button className="p-2 group focus:outline-none">
+                <Mic className="h-4 w-4 group-hover:scale-110 group-hover:text-primary text-muted-foreground" />
+              </button>
+            </TooltipTrigger>
+            <TooltipContent className="text-muted-foreground">
+              Use voice
+            </TooltipContent>
+          </Tooltip>
 
-        <button className="p-2 group focus:outline-none" onClick={handleSubmit}>
-          <SendHorizonal className="h-4 w-4 group-hover:scale-110 group-hover:text-primary text-muted-foreground" />
-        </button>
+          <Toggle className="p-2 group focus:outline-none h-fit w-fit data-[state=on]:bg-primary/10" onClick={() => setUsingCode(!usingCode)} >
+            <Code className="h-4 w-4 group-hover:scale-110 group-hover:text-primary text-muted-foreground" />
+          </Toggle>
+        </div>
+        <div className="grid">
+          <Tooltip>
+            <TooltipTrigger asChild className="focus:outline-none">
+              <button
+                className="p-2 group focus:outline-none"
+                onClick={resetChat}
+              >
+                <MessageCirclePlus className="h-4 w-4 group-hover:scale-110 group-hover:text-primary text-muted-foreground" />
+              </button>
+            </TooltipTrigger>
+            <TooltipContent className="text-muted-foreground">
+              New chat
+            </TooltipContent>
+          </Tooltip>
+
+          <button
+            className="p-2 group focus:outline-none"
+            onClick={handleSubmit}
+          >
+            <SendHorizonal className="h-4 w-4 group-hover:scale-110 group-hover:text-primary text-muted-foreground" />
+          </button>
+        </div>
       </div>
     </div>
   );

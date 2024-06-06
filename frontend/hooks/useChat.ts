@@ -5,6 +5,7 @@ export const useChat = () => {
   const [chatHistory, setChatHistory] = useState<QA[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const scrollRef = useRef<HTMLDivElement>(null);
+  const chatId = "5";
   useEffect(() => {
     if (scrollRef.current) {
       scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
@@ -45,11 +46,22 @@ export const useChat = () => {
     });
   };
 
-  const sendQuestion = async (question: string) => {
+  const sendQuestion = async (
+    chat_id: string,
+    question: string,
+    code: string,
+    withCode: boolean
+  ) => {
     if (question === "") return;
     addQuestionToChat(question);
     setIsLoading(true);
-    let data = await submitQuestion("5", question, "este es el codigo");
+    let data = null;
+    if (withCode) {
+      data = await submitQuestion(chat_id, question, code);
+    } else {
+      data = await submitQuestion(chat_id, question);
+    }
+
     console.log(data);
     if (data != null) {
       setIsLoading(false);
@@ -57,9 +69,11 @@ export const useChat = () => {
     }
 
     console.log(chatHistory);
+    return data?.code || "";
   };
 
   return {
+    chatId,
     chatHistory,
     isLoading,
     sendQuestion,

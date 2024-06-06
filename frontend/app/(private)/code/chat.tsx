@@ -10,14 +10,26 @@ import { useEffect, useRef, useState } from "react";
 type ChatProps = {
   accountName: string;
   setCode: (code: string) => void;
+  code: string;
 };
 
-const Chat = ({ accountName, setCode }: ChatProps) => {
+const Chat = ({ accountName, setCode, code }: ChatProps) => {
   const [highlighted, setHighlighted] = useState<string>("");
-  const { chatHistory, isLoading, sendQuestion, resetChat, scrollRef } =
+  const { chatId, chatHistory, isLoading, sendQuestion, resetChat, scrollRef } =
     useChat();
 
-   
+  const sendQuestionBar = async (question: string, withCode: boolean) => {
+    const response_code = await sendQuestion(chatId, question, code, withCode);
+    setCode(response_code || "");
+  };
+
+  useEffect(() => {
+    for (const qa of chatHistory) {
+      if (qa.answer?.id === highlighted) {
+        setCode(qa.answer.code);
+      }
+    }
+  }, [highlighted]);
 
   return (
     <div className="grid grid-rows-[1fr,auto] h-full pb-2 pt-2">
@@ -40,7 +52,7 @@ const Chat = ({ accountName, setCode }: ChatProps) => {
         {isLoading && <MessageAiSkeleton />}
       </ScrollArea>
       <ChatBar
-        sendQuestion={sendQuestion}
+        sendQuestionBar={sendQuestionBar}
         resetChat={resetChat}
         isLoading={isLoading}
       />
