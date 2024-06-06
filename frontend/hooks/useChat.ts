@@ -1,10 +1,15 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { submitQuestion } from "@/lib/data-code";
 
 export const useChat = () => {
   const [chatHistory, setChatHistory] = useState<QA[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(false);
-
+  const scrollRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
+    }
+  }, [chatHistory]);
   useEffect(() => {
     resetChat();
   }, []);
@@ -50,6 +55,8 @@ export const useChat = () => {
       setIsLoading(false);
       addAnswerToChat(data);
     }
+
+    console.log(chatHistory);
   };
 
   return {
@@ -57,5 +64,6 @@ export const useChat = () => {
     isLoading,
     sendQuestion,
     resetChat,
+    scrollRef,
   };
 };

@@ -13,19 +13,13 @@ interface ChatMessageProps {
 }
 const MeesageUser: FC<ChatMessageProps> = ({ user, message }) => {
   return (
-    <div aria-label="Chat message" className="group">
-      <div aria-label="Message column" className="mt-1 ">
-        <Badge aria-label="User" variant="outline" className="mb-1.5 ">
+    <div aria-label="Chat message" className="group p-2 rounded-xl">
+      <div aria-label="Message column" className=" ">
+       <div className="flex items-center gap-4 mb-2">
+
+       <Badge aria-label="User" variant="outline" >
           {user}
         </Badge>
-
-        <p
-          aria-label="Content"
-          className="text-sm text-foreground tracking-tight"
-        >
-          {message}
-        </p>
-
         <span
           aria-label="Action bar"
           className="flex opacity-0 group-hover:opacity-100"
@@ -47,6 +41,15 @@ const MeesageUser: FC<ChatMessageProps> = ({ user, message }) => {
             </TooltipContent>
           </Tooltip>
         </span>
+       </div>
+        <p
+          aria-label="Content"
+          className="text-sm text-foreground tracking-tight"
+        >
+          {message}
+        </p>
+
+     
       </div>
     </div>
   );

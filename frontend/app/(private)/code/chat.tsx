@@ -5,45 +5,36 @@ import MessageAi from "./message-ai";
 import MessageUser from "./message-user";
 import MessageAiSkeleton from "./message-ai-skeleton";
 import { useChat } from "@/hooks/useChat";
-import { useEffect, useRef } from "react";
-
-/*
-  Chat
-
-  Gestiona el comportamiento de la barra de chat.
-*/
+import { useEffect, useRef, useState } from "react";
 
 type ChatProps = {
   accountName: string;
-  isLoading: boolean;
-  chatHistory: QA[];
-  sendQuestion: (question: string) => void;
-  resetChat: () => void;
+  setCode: (code: string) => void;
 };
 
-const Chat = ({
-  accountName,
-  isLoading,
-  chatHistory,
-  sendQuestion,
-  resetChat,
-}: ChatProps) => {
-  const scrollRef = useRef<HTMLDivElement>(null);
-  useEffect(() => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
-    }
-  }, [chatHistory]);
+const Chat = ({ accountName, setCode }: ChatProps) => {
+  const [highlighted, setHighlighted] = useState<string>("");
+  const { chatHistory, isLoading, sendQuestion, resetChat, scrollRef } =
+    useChat();
+
+   
 
   return (
-    <div className="grid grid-rows-[1fr,auto] h-full px-4 pb-2 pt-1">
-      <ScrollArea className="pr-4" ref={scrollRef}>
+    <div className="grid grid-rows-[1fr,auto] h-full pb-2 pt-2">
+      <ScrollArea className="px-2" ref={scrollRef}>
         {chatHistory.map((qa) => (
           <div key={qa.id}>
             {qa.question && (
               <MessageUser user={accountName} message={qa.question.question} />
             )}
-            {qa.answer && <MessageAi message={qa.answer.explanation} />}
+            {qa.answer && (
+              <MessageAi
+                messageId={qa.id || ""}
+                highlighted={highlighted}
+                setHighlighted={setHighlighted}
+                message={qa.answer.explanation}
+              />
+            )}
           </div>
         ))}
         {isLoading && <MessageAiSkeleton />}

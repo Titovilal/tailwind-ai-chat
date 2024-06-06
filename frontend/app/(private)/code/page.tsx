@@ -7,7 +7,7 @@ import Renderer from "./renderer";
 import { useChat } from "@/hooks/useChat";
 export default function CodePage() {
   const [code, setCode] = useState<string>("");
-  const { chatHistory, isLoading, sendQuestion, resetChat } = useChat();
+
   return (
     <PanelGroup direction="horizontal">
       <Panel defaultSize={50}>
@@ -19,13 +19,8 @@ export default function CodePage() {
           <PanelResizeHandle className="h-0" />
 
           <Panel minSize={12} defaultSize={50} className="border-t  border-r ">
-            <Chat
-              accountName="Tailwind AI"
-              chatHistory={chatHistory}
-              isLoading={isLoading}
-              sendQuestion={sendQuestion}
-              resetChat={resetChat}
-            />
+            <Chat accountName="Normal user"
+            setCode={setCode} />
           </Panel>
         </PanelGroup>
       </Panel>

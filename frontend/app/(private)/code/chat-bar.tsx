@@ -49,7 +49,7 @@ const ChatBar = ({ sendQuestion, resetChat, isLoading }: ChatBarProps) => {
   };
 
   return (
-    <div className="mt-2 flex overflow-hidden rounded-lg border focus-visible:ring-offset-0 focus-within:ring-1 focus-within:ring-ring">
+    <div className="mt-2 mx-2 flex overflow-hidden rounded-lg border focus-visible:ring-offset-0 focus-within:ring-1 focus-within:ring-ring">
       <Textarea
         id="message"
         placeholder="Type your message here..."

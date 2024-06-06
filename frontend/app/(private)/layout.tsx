@@ -4,7 +4,7 @@ import React, { ReactNode } from "react";
 
 export default function PrivateLayout({ children }: { children: ReactNode }) {
   return (
-    <div className="min-h-screen grid grid-cols-[3.5rem,1fr]">
+    <div className="min-h-screen grid grid-cols-[3rem,1fr]">
       <MainNav />
       {children}
     </div>

@@ -22,7 +22,7 @@ const MainNav = () => {
       <section className="grid gap-4">
         <Link
           href="/"
-          className="group flex h-9 w-9 items-center justify-center rounded-lg text-background bg-primary transition-colors"
+          className="group flex h-8 w-8 items-center justify-center rounded-lg text-background bg-primary transition-colors"
         >
           <Bot className="h-5 w-5 group-hover:scale-110" />
         </Link>
@@ -30,7 +30,7 @@ const MainNav = () => {
           <TooltipTrigger asChild>
             <Link
               href="code"
-              className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-primary"
+              className="flex h-8 w-8 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-primary"
             >
               <Code className="h-5 w-5" />
               <span className="sr-only">Code</span>
@@ -42,7 +42,7 @@ const MainNav = () => {
           <TooltipTrigger asChild>
             <Link
               href="history"
-              className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-primary"
+              className="flex h-8 w-8 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-primary"
             >
               <History className="h-5 w-5" />
               <span className="sr-only">History</span>
@@ -54,7 +54,7 @@ const MainNav = () => {
           <TooltipTrigger asChild>
             <Link
               href="questions"
-              className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-primary"
+              className="flex h-8 w-8 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-primary"
             >
               <MessageCircleQuestion className="h-5 w-5" />
               <span className="sr-only">Questions</span>
@@ -69,7 +69,7 @@ const MainNav = () => {
           <TooltipTrigger asChild>
             <Link
               href="test"
-              className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-primary"
+              className="flex h-8 w-8 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-primary"
             >
               <FlaskConical className="h-5 w-5" />
               <span className="sr-only">Test</span>
@@ -81,7 +81,7 @@ const MainNav = () => {
           <TooltipTrigger asChild>
             <Link
               href="login"
-              className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-primary"
+              className="flex h-8 w-8 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-primary"
             >
               <LogOut className="h-5 w-5" />
               <span className="sr-only">Logout</span>
@@ -93,7 +93,7 @@ const MainNav = () => {
           <TooltipTrigger asChild>
             <Link
               href="#"
-              className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-primary"
+              className="flex h-8 w-8 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-primary"
             >
               <Settings className="h-5 w-5" />
               <span className="sr-only">Settings</span>
