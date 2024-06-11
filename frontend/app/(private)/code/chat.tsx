@@ -14,8 +14,8 @@ type ChatProps = {
 };
 
 const Chat = ({ accountName, setCode, code }: ChatProps) => {
-  const [highlighted, setHighlighted] = useState<string>("");
-  const { chatId, chatHistory, isLoading, sendQuestion, resetChat, scrollRef } =
+ 
+  const { chatId, chatHistory, isLoading, sendQuestion, resetChat, scrollRef, highlighted, setHighlighted } =
     useChat();
 
   const sendQuestionBar = async (question: string, withCode: boolean) => {

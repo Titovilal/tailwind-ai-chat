@@ -4,7 +4,7 @@ type UserMessage = {
 };
 
 type AIMessage = {
-  id?: string;
+  id: string;
   explanation: string;
   code: string;
 };

@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { submitQuestion } from "@/lib/data-code";
 
 export const useChat = () => {
+  const [highlighted, setHighlighted] = useState<string>("");
   const [chatHistory, setChatHistory] = useState<QA[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -31,6 +32,7 @@ export const useChat = () => {
   };
 
   const addAnswerToChat = (answer: AIMessage) => {
+
     setChatHistory((prevChatHistory) => {
       return prevChatHistory.map((item) => {
         if (item.id === "NEW") {
@@ -44,6 +46,7 @@ export const useChat = () => {
         }
       });
     });
+    setHighlighted(answer.id)
   };
 
   const sendQuestion = async (
@@ -62,13 +65,11 @@ export const useChat = () => {
       data = await submitQuestion(chat_id, question);
     }
 
-    console.log(data);
     if (data != null) {
       setIsLoading(false);
       addAnswerToChat(data);
     }
 
-    console.log(chatHistory);
     return data?.code || "";
   };
 
@@ -79,5 +80,7 @@ export const useChat = () => {
     sendQuestion,
     resetChat,
     scrollRef,
+    highlighted,
+    setHighlighted,
   };
 };
