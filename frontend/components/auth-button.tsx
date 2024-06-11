@@ -4,13 +4,11 @@ import { Button } from "./ui/button";
 const AuthButton = () => {
   const { data: session } = useSession();
 
-  console.log(session);
-  if (session && session.user) {
+add  if (session && session.user) {
     return (
       <>
         Signed in as {session.user.email} <br />
         <Button onClick={() => signOut()}>Sign out</Button>
-
         <div className="p-8"> {session.expires}</div>
       </>
     );
