@@ -43,15 +43,21 @@ async def create_ai_message(message: AIMessage) -> int:
 @router_message.post("/submit")
 async def get_response(
     chatId: str = Body(...), question: str = Body(...), code: str = Body(...)
-) -> AIMessage:
-    print(chatId, question, code)
+) -> AIMessageResponse:
     usermessage = UserMessage(question=question)
     account_id = await create_user_message(usermessage)
 
     if code == "":
-        response = chat_gpt(question) 
+        role = "You are an assistant that writes Tailwind code. Your response should be in JSON format, with the following keys: explanation, code. In the explanation i want only text that explains the code, and in code i want only the tailwind code."
+        prompt = question
     else:
-        response = chat_gpt("Modify the following code" + "\n ```html\n" + code + "\n```" + "using this instruction: " + question)
+        role = "You are an assistant that reviews and modifies HTML code using Tailwind CSS. Your response should be in JSON format, with the following keys: explanation, code. In the explanation i want only text that explains the modifications, and in code i want the modified Tailwind code."
+        prompt = (
+            f"Here is some HTML code:\n```html\n{code}\n```\n"
+            f"Please modify this code according to the following instruction: {question}"
+        )
+    
+    response = chat_gpt(prompt, role=role)
         
     response_json = json.loads(response)
     response_explanation = response_json['explanation']
@@ -74,7 +80,6 @@ async def get_response(
         explanation=aimessage.explanation,
         code=aimessage.code
     )
-    aimessageresponse.id = ai_id
 
 
     if not chatId:
