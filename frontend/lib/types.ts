@@ -9,8 +9,23 @@ type AIMessage = {
   code: string;
 };
 
+type AIMessageResponse = {
+  explanation: string;
+  code: string;
+};
+
+type QAResponse = {
+  chat_id?: number;
+  question_id?: number;
+  answer_id?: number;
+  created_at?: Date;
+  status?: "like" | "dislike" | "reviewed";
+  groundtruth?: string;
+};
+
 type QA = {
   id?: string;
+  chat_id?: string;
   question?: UserMessage;
   answer?: AIMessage;
   created_at?: Date;
