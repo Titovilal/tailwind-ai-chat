@@ -1,86 +1,36 @@
-# Tailwind AI Chat
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-Bienvenido al repositorio de **Tailwind AI Chat**. Este proyecto se compone de un frontend, un backend y una base de datos, organizados en tres carpetas principales.
+## Getting Started
 
-## Contenido
-
-- [Ejecución del Proyecto](#ejecución-del-proyecto)
-  - [Frontend](#frontend)
-  - [Backend](#backend)
-  - [Base de Datos](#base-de-datos)
-- [Tecnologías Utilizadas](#tecnologías-utilizadas)
-- [Estructura del Proyecto](#estructura-del-proyecto)
-- [Desarrolladores](#desarrolladores)
-
-## Ejecución del Proyecto
-
-### Frontend
-
-Para ejecutar el frontend, navega a la carpeta `frontend` y utiliza el siguiente comando:
+First, run the development server:
 
 ```bash
-pnpm run dev
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-### Backend
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-Para ejecutar el backend, navega a la carpeta `backend` y utiliza el siguiente comando:
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-```bash
-python main.py
-```
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-### Base de Datos
+## Learn More
 
-Para iniciar la base de datos, asegúrate de tener Docker Engine encendido y utiliza el siguiente comando en la raíz del proyecto:
+To learn more about Next.js, take a look at the following resources:
 
-```bash
-supabase start
-```
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-Si necesitas repoblar la base de datos, utiliza el siguiente comando:
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-```bash
-supabase db reset
-```
+## Deploy on Vercel
 
-## Tecnologías Utilizadas
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-### Frontend
-
-- **Next.js**: Framework de React para aplicaciones web.
-- **Tailwind CSS**: Framework CSS para un diseño rápido y responsivo.
-- **shadcn**: Componentes UI para Tailwind CSS.
-
-### Backend
-
-- **FastAPI**: Framework web moderno y rápido para construir APIs con Python.
-
-### Base de Datos
-
-- **Supabase**: Plataforma de base de datos que proporciona un backend como servicio.
-
-## Estructura del Proyecto
-
-La estructura del proyecto está organizada en las siguientes carpetas:
-
-```
-.
-├── frontend
-│   ├── components
-│   ├── pages
-│   ├── styles
-│   └── ...
-├── backend
-│   ├── app
-│   ├── main.py
-│   └── ...
-└── ai
-    ├── models
-    ├── scripts
-    └── ...
-```
-
-- **frontend**: Contiene todo el código relacionado con la interfaz de usuario.
-- **backend**: Contiene el código del servidor y la API.
-- **ai**: Contiene los modelos y scripts relacionados con la inteligencia artificial del chat.
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
