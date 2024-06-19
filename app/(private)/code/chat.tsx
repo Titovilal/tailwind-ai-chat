@@ -4,7 +4,7 @@ import ChatBar from "./chat-bar";
 import MessageAi from "./message-ai";
 import MessageUser from "./message-user";
 import MessageAiSkeleton from "./message-ai-skeleton";
-import { useChat } from "@/hooks/useChat";
+import { useChat } from "@/lib/useChat";
 import { useEffect, useRef, useState } from "react";
 
 type ChatProps = {
