@@ -4,7 +4,7 @@ import { Button } from "./ui/button";
 const AuthButton = () => {
   const { data: session } = useSession();
 
-add  if (session && session.user) {
+  if (session && session.user) {
     return (
       <>
         Signed in as {session.user.email} <br />
