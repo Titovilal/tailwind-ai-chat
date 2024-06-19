@@ -3,8 +3,8 @@ export async function submitQuestion(
   question: string,
   code?: string
 ): Promise<AIMessage | null> {
-  let data = null;
-  const url = "http://localhost:8001/message/submit";
+  let aiMessage = null;
+  const url = "/api/messages";
 
   const body: any = {
     chatId: chatId,
@@ -26,12 +26,11 @@ export async function submitQuestion(
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
-    const paco = await response.json()
-    data = (paco) as AIMessage;
-    console.log(paco)
+    const aiMessage_raw = await response.json();
+    aiMessage = aiMessage_raw as AIMessage;
+    console.log(aiMessage_raw);
   } catch (err: any) {
     console.error("Something went wrong: ", err);
   }
-  return data;
+  return aiMessage;
 }
-
